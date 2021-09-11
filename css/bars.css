@@ -1,0 +1,183 @@
+/* GENERAL STYLES */
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a, .dropbtn {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	color: var(--null);
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	color: var(--main);
+	border-bottom: 2px solid var(--main);
+}
+
+/* UTILITIES */
+
+:root {
+  --null: #000000;
+  --null-rev: #ffffff;
+  --main: #4682b4;
+  --sub: #1d3549;
+  --m-1: #f5f5f5;
+  --m-2: #e6e6e6;
+  --s-1: #0e1b25;
+}
+
+.logo {
+	float: left;
+	padding: 14px 16px;
+}
+
+/* TOP BAR */
+
+#topbar {
+	border-bottom: 1px solid var(--m-1);
+	height: 60px;
+		padding-bottom: 0px;
+		background-color: #cecad4;
+
+
+}
+
+/* DROPDOWN */
+
+.dropdown:hover .dropdown-content {
+	display: grid;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+  background-color: var(--sub);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  padding: 0 10%;
+}
+
+.dropdown-content a {
+	color: var(--null-rev);
+}
+
+.dropdown-content a:hover {
+	background-color: var(--s-1);
+	border-bottom: none;
+	color: var(--null-rev);
+}
+
+.grid-2 {
+	grid-template-columns: auto auto;
+}
+
+.grid-3 {
+	grid-template-columns: auto auto auto;
+}
+
+/* BOTTOM BAR */
+
+.bot {
+	width: 100%;
+}
+
+.bot a:hover {
+	background-color: var(--m-2);
+	border-bottom: none;
+}
+
+.div-bot {
+	padding: 18px 0 9px 0;
+	font-weight: bold;
+}
+
+#botbar {
+	display: grid;
+	grid-template-columns: 40% 15% 15% 15% 15%;
+	padding: 17px;
+	text-align: center;
+	background-color: var(--m-1);
+	color: var(--null);
+	background-color: #2d4a58;
+	margin-top: 600px;
+}
+
+/*
+<div id="topbar">
+	<div class="logo">
+		LOGO
+	</div>
+	<ul>
+		<li><a href="">MEMBERSHIP</a></li>
+		<li><a href="">CLASSES</a></li>
+		<li class="dropdown">
+			<a href="" class="dropbtn">COMMUNITY</a>
+			<div class="dropdown-content grid-3">
+				<a href="">SOCIAL MEDIA</a>
+				<a href="">EVENTS</a>
+				<a href="">ANNOUNCEMENTS</a>
+			</div>
+		</li>
+		<li><a href="">STORE</a></li>
+		<li class="dropdown">
+			<a href="" class="dropbtn">ABOUT</a>
+			<div class="dropdown-content grid-2">
+				<a href="">FITNESS</a>
+				<a href="">OUR TEAM</a>
+			</div>
+		</li>
+		<li style="float:right;"><a href=""><i class="fas fa-user-circle"></i></a></li>
+		<li style="float:right;"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+		<li style="float:right;"><a href=""><i class="fas fa-search"></i></a></li>
+	</ul>
+</div>
+<div id="botbar">
+	<div class="logo">
+		LOGO
+	</div>
+	<div>
+		<div class="div-bot">SUBSCRIPTIONS</div>
+		<ul>
+			<li class="bot"><a href="">MEMBERSHIP</a></li>
+			<li class="bot"><a href="">CLASSES</a></li>
+		</ul>
+	</div>
+	<div>
+		<div class="div-bot">COMMUNITY</div>
+		<ul>
+			<li class="bot"><a href="">SOCIAL MEDIA</a></li>
+			<li class="bot"><a href="">EVENTS</a></li>
+			<li class="bot"><a href="">ANNOUNCEMENTS</a></li>
+		</ul>
+	</div>
+	<div>
+		<div class="div-bot">ABOUT</div>
+		<ul>
+			<li class="bot"><a href="">FITNESS</a></li>
+			<li class="bot"><a href="">OUR TEAM</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li class="bot"><a href="">STORE</a></li>
+			<li class="bot"><a href="">CONTACT US</a></li>
+			<li class="bot"><a href="">CART</a></li>
+			<li class="bot"><a href="">USER</a></li>
+		</ul>
+	</div>
+</div>

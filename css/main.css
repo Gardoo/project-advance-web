@@ -1,0 +1,95 @@
+/* GENERAL STYLES */
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+
+}
+.logo{
+color: darkred;
+
+
+}
+#main{
+
+background-image: url('https://data.1freewallpapers.com/download/barbell-gym-sport-1600x900.jpg');
+background-repeat: no-repeat;
+text-align: center;
+color:white;
+background-position: center;
+font-size: 20px;
+
+background-size: cover;
+height: 90vh;
+padding-top: 100px;
+margin-bottom: 0px;
+
+
+
+
+}
+
+#main a:hover{
+
+	background-color: darkblue;
+}
+
+#main a{
+
+	color: darkred;
+	width: 150px;
+    line-height: 120px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 32px;
+    border: 3px solid #2D4A58;
+    text-decoration: none;
+    background-color: #2D4A58;
+
+}
+
+#navbar{
+	text-decoration: none;
+}
+
+#navbar li{
+
+
+	display: grid;
+	list-style-type: none;
+	word-spacing: 5px;
+	 left: 0;
+
+
+
+
+	
+}
+
+
+
+#navbar ul{
+margin-bottom: 50px;
+text-align: center;
+font-weight: bold;
+background-color: #cecad4;
+
+
+
+
+}
+#store {
+
+
+
+	
+}
+
+
+
+	
+/* UTILITIES */
+
+/* MAIN */
