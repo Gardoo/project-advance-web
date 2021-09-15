@@ -18,7 +18,7 @@ li a, .dropbtn {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	padding: 14px 16px;
+	padding: 20px 16px;
 	color: var(--null);
 }
 
@@ -41,7 +41,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .logo {
 	float: left;
-	padding: 14px 16px;
+	padding: 20px 16px;
 }
 
 /* TOP BAR */
@@ -49,16 +49,31 @@ li a:hover, .dropdown:hover .dropbtn {
 #topbar {
 	border-bottom: 1px solid var(--m-1);
 	height: 60px;
-		padding-bottom: 0px;
-		background-color: #cecad4;
-		flex-wrap: wrap;
-		margin: 0px;
-		padding-top: ;	
-
-
+	background-color: #cecad4;
+	flex-wrap: wrap;
 }
 
 /* DROPDOWN */
+
+.dropbtn::after {
+	content: " ";
+	position: relative;
+ 	top: 10px;
+  	left: 5px;
+	border-width: 5px;
+  	border-style: solid;
+  	border-color: var(--main) transparent transparent transparent;
+}
+
+.dropdown:hover .dropbtn::after {
+	content: " ";
+	position: relative;
+  	top: -13px;
+  	left: 5px;
+	border-width: 5px;
+  	border-style: solid;
+  	border-color: transparent transparent var(--main) transparent;
+}
 
 .dropdown:hover .dropdown-content {
 	display: grid;
@@ -67,16 +82,21 @@ li a:hover, .dropdown:hover .dropbtn {
 .dropdown-content {
 	display: none;
 	position: absolute;
-  background-color: var(--sub);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  width: 100%;
-  left: 0;
-  padding: 0 10%;
+	background-color: var(--sub);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	width: 100%;
+	left: 0;
+	padding: 0 10%;
+	text-align: center;
 }
 
 .dropdown-content a {
 	color: var(--null-rev);
+}
+
+.dropdown-content a i, .dropdown-content a div {
+	padding-bottom: 10px;
 }
 
 .dropdown-content a:hover {

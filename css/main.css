@@ -5,167 +5,106 @@ body {
 	padding: 0;
 	border: 0;
 	height: 0;
-
-
-}
-.logo{
-color: black;
-
-
-}
-#main{
-
-background-image: url('https://data.1freewallpapers.com/download/barbell-gym-sport-1600x900.jpg');
-background-repeat: no-repeat;
-text-align: center;
-color:white;
-background-position: center;
-font-size: 20px;
-
-background-size: cover;
-height: 90vh;
-padding-top: 100px;
-margin-bottom: 0px;
-
-
-
-
 }
 
-#main a:hover{
-
-	background-color: darkblue;
-	 border-radius: 25px;
-	 
-	    padding-left: 15px;
-    padding-right: 15px;
-
-   
- 
+.logo {
+	color: black;
 }
 
-#main a  {
+#main {
+	background-image: url('https://data.1freewallpapers.com/download/barbell-gym-sport-1600x900.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 90vh;
+	padding-top: 100px;
+	margin-bottom: 0px;
 
-	color: darkred;
+	text-align: center;
+	color:white;
+	font-size: 20px;
+}
+
+#main a {
+	background: red; /* ? */
+	background-color: #2D4A58;
 	width: 150px;
     line-height: 120px;
-    background: red;
-    border-radius: 25px;
-    text-align: center;
-    font-size: 32px;
-    text-decoration: none;
-    background-color: #2D4A58;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     margin-bottom: 0;
+    border-radius: 25px;
 
-
-
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    color: darkred;
 }
 
-.work{
+#main a:hover {
+	background-color: darkblue;
+ 	border-radius: 25px;
+    padding: 0 15px;
+}
 
+.work {
 	margin-top: 60px;
 	font-size: 30px;
-
 }
 
-.box{
+.box {
 	display: flex;
 	font-size: 20px;
 	text-align: justify;
 	margin-left: 20px;
-
-
-
 }
-.join a{
+
+.join a {
 	text-decoration: none;
 }
 
-.join h2{
+.join h2 {
+	background-color: skyblue;
+	width:170px;
 	margin-top: 130px;
 	margin-left: 20px;
-	color: black;
 	padding-left: 20px;
+	border-radius: 20px;
 
-background-color: skyblue;
-width:170px;
-border-radius: 20px;
-
-
-
+	color: black;
 }
 
-
-
-
-
-
-
-
-
-.title-program{
-
+.title-program {
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 20px;
 }
 
-.programs{
-display: flex;
-justify-content: center;
-justify-content: space-around;
-
-
-
+.programs {
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
 }
 
-
-.images{
-background-color: lightblue;
-padding-bottom: 40px;
-
-
+.images {
+	background-color: lightblue;
+	padding-bottom: 40px;
 }
 
-.images img{
-
+.images img {
+	height: 200px;
+	width: 400px;
 	margin-top: 0px;
-
-	 width: 400px;
-  height: 200px;
-
-
-  
- 
-  
 }
 
-.images:hover{
-
-
+.images:hover {
 	transform: scale(1.2);
 } 
 
-
-
-.images p{
-
-
+.images p {
 	text-align: center;
 	font-weight: bolder;
 }
 
-
-.view-all h1 a{
+.view-all h1 a {
 	color: black;
 }
-
-
-
-
-	
-/* UTILITIES */
-
-/* MAIN */``
