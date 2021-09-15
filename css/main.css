@@ -60,7 +60,51 @@ margin-bottom: 0px;
     margin-bottom: 0;
 
 
+
 }
+
+.work{
+
+	margin-top: 60px;
+	font-size: 30px;
+
+}
+
+.box{
+	display: flex;
+	font-size: 20px;
+	text-align: justify;
+	margin-left: 20px;
+
+
+
+}
+.join a{
+	text-decoration: none;
+}
+
+.join h2{
+	margin-top: 130px;
+	margin-left: 20px;
+	color: black;
+	padding-left: 20px;
+
+background-color: skyblue;
+width:170px;
+border-radius: 20px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
 .title-program{
 
 	text-align: center;
@@ -114,7 +158,9 @@ padding-bottom: 40px;
 }
 
 
-
+.view-all h1 a{
+	color: black;
+}
 
 
 
