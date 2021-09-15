@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	height: 0;
 
 
 }
@@ -56,20 +57,69 @@ margin-bottom: 0px;
     background-color: #2D4A58;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 0;
+
+
+}
+.title-program{
+
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.programs{
+display: flex;
+justify-content: center;
+justify-content: space-around;
+
 
 
 }
 
+
+.images{
+background-color: lightblue;
+padding-bottom: 40px;
+
+
 }
-.store{
+
+.images img{
+
+	margin-top: 0px;
+
+	 width: 400px;
+  height: 200px;
 
 
-
-	
+  
+ 
+  
 }
+
+.images:hover{
+
+
+	transform: scale(1.2);
+} 
+
+
+
+.images p{
+
+
+	text-align: center;
+	font-weight: bolder;
+}
+
+
+
+
+
 
 
 	
 /* UTILITIES */
 
-/* MAIN */
+/* MAIN */``
