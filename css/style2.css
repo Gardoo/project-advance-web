@@ -4,7 +4,7 @@
 		box-sizing: border-box;
 		font-family: sans-serif;
 }
-body{
+.body{
 		display: flex;
 		height: 100vh;
 		justify-content: center;
@@ -124,99 +124,6 @@ form .button input{
 form .button input:hover{
 		background: linear-gradient(#96a7cf, #e3efe8);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
