@@ -1,102 +1,225 @@
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: sans-serif;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif;
 }
 body{
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
-	background-image: url(gym1.jpg);
-	color: white;
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		background-color: light-gray;
+		color: white;
+		background-image: url(gym1.jpg);
+		background-size: cover;
 }
 .mform{
-	max-width: 700px;
-	width: 100%;
-	background: rgb(0, 0, 0, 0.8);
-	padding: 25px 30px;
-	border-radius: 10px;
+		max-width: 700px;
+		background: rgb(0, 0, 0, 0.6);
+		padding: 10px 40px;
+		border-radius: 10px;
 }
 .mform .title{
-	font-size: 25px;
-	font-weight: 500;
-	text-align: center;
-	position: relative;
-	padding-bottom: 10px;
+		font-size: 40px;
+		font-weight: 500;
+		text-align: center;
+		position: relative;
+		padding-bottom: 10px;
 }
 .mform .title::before{
-content: ' ';
-position: absolute;
-left: 0;
-bottom: 0;
-height: 4px;
-width: 640px;
-background: linear-gradient(#96a7cf, #e3efe8);
+		content: ' ';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 4px;
+		width: 620px;
+		background: linear-gradient(#96a7cf, #e3efe8);
 }
 .mform form .user-info{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-margin: 20px 0 12px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 20px 0 12px 0;
 }
-form .user-info .t-box{
-margin-bottom: 15px;
-width: 100%;
+.t-box1{
+		margin-bottom: 10px;
+		width: 49%;
 }
-.user-info .t-box .details{
-display: block;
-font-weight: 500;
-margin-bottom: 5px;
+.t-box2{
+		margin-bottom: 10px;
+		width: 100%;
 }
-.user-info .t-box input{
-height: 45px;
-width: 100%;
-outline: none;
-border-radius: 5px;
-border: 1px solid #ccc;
-padding-left: 15px;
-font-size: 16px;
-border-bottom-width: 2px;
-transition all 0.3s ease;
+.user-info .t-box1 .details{
+		display: block;
+		font-weight: 500;
+		margin-bottom: 5px;
 }
-form .dateob .dob{
-font-size: 20px;
-font-weight: 500;
+.user-info .t-box1 input{
+		height: 45px;
+		width: 100%;
+		outline: none;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		padding-left: 15px;
+		font-size: 16px;
+		border-bottom-width: 2px;
+		transition all 0.3s ease;
+}
+.user-info .t-box2 .details{
+		display: block;
+		font-weight: 500;
+		margin-bottom: 5px;
+}
+.user-info .t-box2 input{
+		height: 45px;
+		width: 100%;
+		outline: none;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		padding-left: 15px;
+		font-size: 16px;
+		border-bottom-width: 2px;
+		transition all 0.3s ease;
 }
 form .dateob .category{
-display: flex;
-height: 30px;
-width: 90%;
-margin: 30px 5px;
-justify-content: space-between;
+		display: flex;
+		height: 38px;
+		width: 97%;
+		margin: 10px 5px;
+		justify-content: space-between;
 }
-.user-info .t-box input:focus,
-.user-info .t-box input:valid{
-border-color: #48dbfb;
+form .gender .category{
+		display: flex;
+		height: 38px;
+		width: 100%;
+		margin: 10px 5px;
+		justify-content: space-between;
+}
+.user-info .t-box1 input:focus,
+.user-info .t-box1 input:valid{
+		border-color: #48dbfb;
+}
+.user-info .t-box2 input:focus,
+.user-info .t-box2 input:valid{
+		border-color: #48dbfb;
 }
 form .button{
-height: 45px;
-margin: 45px 0;
+		height: 45px;
+		margin: 20px;
 }
 form .button input{
-height: 100%;
-width: 100%;
-outline: none;
-color: black;
-border: none;
-font-size: 18px;
-font-weight: 500;
-letter-spacing: 1px;
-border-raidus: 5px;
+		
+		height: 100%;
+		width: 60%;
+		outline: none;
+		color: black;
+		border: none;
+		font-size: 27px;
+		font-weight: 500;
+		letter-spacing: 3px;
+		border-radius: 50px;
 }
 form .button input:hover{
-background: linear-gradient(#96a7cf, #e3efe8);
+		background: linear-gradient(#96a7cf, #e3efe8);
 }
 
-.topbar {
-	float: left;
-	padding: 20px 16px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
