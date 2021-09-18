@@ -2,6 +2,8 @@
 /* GENERAL STYLES */
 
 
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -128,7 +130,7 @@ a{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 600px;
   position: relative;
   margin: auto;
 }
@@ -144,7 +146,7 @@ a{
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  
   padding: 16px;
   color: black;
   font-weight: bold;
@@ -218,9 +220,4 @@ a{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-.mySlides-fade img{
-
-	min-width: 100%;
-	max-height: 50%;
 }
