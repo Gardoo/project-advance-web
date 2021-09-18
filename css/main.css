@@ -21,7 +21,7 @@ a{
 }
 
 #main {
-	background-image: url('https://data.1freewallpapers.com/download/barbell-gym-sport-1600x900.jpg');
+	background-image: url('https://i.pinimg.com/originals/7f/80/97/7f809798d94f989d12b8ec8c06d3c653.gif');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -133,11 +133,13 @@ a{
   max-width: 600px;
   position: relative;
   margin: auto;
+
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  
 }
 
 /* Next & previous buttons */
