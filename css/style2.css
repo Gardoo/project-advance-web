@@ -11,7 +11,7 @@ body{
 		align-items: center;
 		padding: 10px;
 		color: black;
-		background-image: url(project-advance-web/orf-bg.jpg);
+		background-image: url(../orf-bg.jpg);
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 }
