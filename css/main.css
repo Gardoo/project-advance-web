@@ -13,8 +13,9 @@ body {
 	height: 0;
 }
 
-.logo {
-	color: black;
+.logo, .logo > img {
+	height: inherit;
+	width: auto;
 }
 a{
 	text-decoration: none;
