@@ -39,7 +39,7 @@ li a:hover, .dropdown:hover .dropbtn {
   --s-1: #0e1b25;
 }
 
-.logo, .logo > img {
+.logo > img {
 	height: inherit;
 	width: auto;
 }
