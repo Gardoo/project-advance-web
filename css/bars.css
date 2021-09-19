@@ -47,10 +47,11 @@ li a:hover, .dropdown:hover .dropbtn {
 /* TOP BAR */
 
 #topbar {
-	border-bottom: 1px solid var(--m-1);
+
 	height: 60px;
-	background-color: #cecad4;
-	flex-wrap: wrap;
+
+	display: flex;
+	margin-left: 500px;
 }
 
 /* DROPDOWN */
