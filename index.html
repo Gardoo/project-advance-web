@@ -69,24 +69,27 @@
 				<img src="img/share.png">
 				<img src="img/info.png">
 			</div>
+<!-- The overlay -->
+<div id="myNav" class="overlay">
 
-			<div id="myNav" class="overlay">
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-			
-			 <div class="overlay-content">
-			 
+  <!-- Overlay content -->
+  <div class="overlay-content">
+  	<a href="#">Login</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
 
+</div>
 
-					
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">open</span>
 
-					<a href="#">Login</a>
-			    <a href="#">About</a>
-			    <a href="#">Services</a>
-			    <a href="#">Clients</a>
-			    <a href="#">Contact</a>
-
-			</div>
+<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
 
 
 </div>
@@ -94,8 +97,7 @@
 
 
 
-		<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
-
+		
 			
 		</div>
 
@@ -103,6 +105,7 @@
 
 
 <script>
+
 /* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
@@ -112,7 +115,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
-	
 </script>
 
 

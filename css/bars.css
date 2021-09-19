@@ -39,9 +39,14 @@ li a:hover, .dropdown:hover .dropbtn {
   --s-1: #0e1b25;
 }
 
+.logo, .logo > img {
+	height: inherit;
+	width: auto;
+}
+
 .logo {
 	float: left;
-	padding: 20px 16px;
+	padding-left: 8px;
 }
 
 /* TOP BAR */
@@ -184,7 +189,7 @@ padding: 20px 30px;
 border: none;
 
 margin-left: 1150px;
-position:absolute; top:0; right:40 ; bottom: ;
+position:absolute; top:0; right:0;
 
 
 
@@ -263,12 +268,17 @@ padding: 20px;
 #botbar {
 	display: grid;
 	grid-template-columns: 40% 15% 15% 15% 15%;
+	height: 254px;
 	padding: 17px;
 	text-align: center;
 	background-color: var(--m-1);
 	color: var(--null);
 	background-color: #2d4a58;
 	margin-top: 200px;
+}
+
+#botbar > div {
+	height: 215px;
 }
 
 .images h2{
