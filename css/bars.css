@@ -188,7 +188,7 @@ padding: 20px 30px;
 border: none;
 
 margin-left: 1150px;
-position:absolute; top:0; right:40 ; bottom: ;
+position:absolute; top:0; right:0;
 
 
 
@@ -267,7 +267,7 @@ padding: 20px;
 #botbar {
 	display: grid;
 	grid-template-columns: 40% 15% 15% 15% 15%;
-	height: 249px;
+	height: 254px;
 	padding: 17px;
 	text-align: center;
 	background-color: var(--m-1);
