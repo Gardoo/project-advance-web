@@ -30,38 +30,67 @@
 
 
 
-	
-	<div class="container">
+<div class="container">
 
 
-<div id="bg-woman">
-		<div class="custom-shape-divider-bottom-1632050936">
+			<div id="bg-woman">
+					<div class="custom-shape-divider-bottom-1632050936">
 
-		    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-		        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-		    </svg>
-		</div>
-		<div class="navbar">
+					    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+					    </svg>
+					</div>
+					<div class="navbar">
 
-			<img src="C:\Users\Gardo\Desktop\FITNESS\project-advance-web\img\gofit_banner.png" class="logo">
-			<button type="button">Sign up</button>
-		</div>
-	</div>
+						<img src="C:\Users\Gardo\Desktop\FITNESS\project-advance-web\img\gofit_banner.png" class="logo">
+						<button type="button" class="btn">Sign up</button>
+					</div>
+				</div>
 
-		<div class="navbar">
-
-		</div>
+		
+		
 		<div class="content">
 			<h3>Welcome to our</h3>
 			<h1>Fitness <br>Gym Club</h1>
-			<button type="button">Get Membership Now</button>
+			<button type="button" class="btn">Get Membership Now</button>
+
 		</div>
+	<div class="popup" id="form">
+					<div class="popup-content">
+						<span onclick="closeForm()"><img src="img/close.png" class="close"></span>
+
+					<img src="img/admin.png">
+					<h3>Admin Login</h3>
+					<input type="username" placeholder="Username">
+					<input type="password" placeholder="Password">
+					
+					<a href="#" class="btn">Login</a>
+
+					</div>
+				</div>
+					</div>
+
+	<div class="popup" id="form2">
+					<div class="popup-content">
+						<span onclick="closeForm()"><img src="img/close.png" class="close"></span>
+
+					<img src="img/admin.png">
+					<h3>Account Login</h3>
+					<input type="username" placeholder="Username">
+					<input type="password" placeholder="Password">
+					
+					<a href="#" class="btn">Login</a>
+
+					</div>
+				</div>
+			
+
 
 		<div class="sidebar">
 
 			<div class="social-links">
 			<a href="">	<img src="img/fb.png"></a>
-				<a href="#myNav"><img src="img/tw.png"></a>
+				<a href=""><img src="img/tw.png"></a>
 			<a href="">	<img src="img/ig.png"></a>
 			</div>
 			
@@ -69,9 +98,11 @@
 				<img src="img/share.png">
 				<img src="img/info.png">
 
-				<img src="img/admin.png" >
+			<span onclick="admin()"><img src="img/admin.png"></span>
 
 			</div>
+
+
 <!-- The overlay -->
 <div id="myNav" class="overlay">
 
@@ -80,18 +111,14 @@
 
   <!-- Overlay content -->
   <div class="overlay-content">
-  	<a href="#">Login</a>
+  	<a href="#" onclick="openLogin()">Login</a>
     <a href="#">Services</a>
     <a href="#">Classes</a>
     <a href="#">Contact</a>
-    <a href="#">Admin login</a>
     <a href="#">About</a>
   </div>
 
 </div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-<span onclick="openNav()">open</span>
 
 <span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
 
@@ -108,18 +135,9 @@
 	</div>
 
 
-<script>
 
-/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-</script>
+
 
 
 		<!----- -----------------------Navagation-------------------------->
@@ -134,6 +152,39 @@ function closeNav() {
 	<!------------------------------BODY--------------------------------------->	
 
 	</div>
+	<script>
+
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
+
+function admin(){
+	 	document.getElementById("form").style.display = "flex";
+
+	 }
+	 function closeForm(){
+	 	document.getElementById("form").style.display = "none";
+
+	 }
+	 function openLogin(){
+	 	document.getElementById("form2").style.display = "flex";
+	 	document.getElementById("myNav").style.width = "0%";
+
+	 }
+	 function closeForm(){
+	 	document.getElementById("form2").style.display = "none";
+
+	 }
+
+</script>
 	
 
 	<div class="work">
