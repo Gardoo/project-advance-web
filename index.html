@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bars.css">
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 	
+	<script src="js/design.js"></script>
 	
 
 
@@ -40,10 +41,13 @@
 					        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
 					    </svg>
 					</div>
-					<div class="navbar">
+					<div class="navbar" id="">
 
 						<img src="C:\Users\Gardo\Desktop\FITNESS\project-advance-web\img\gofit_banner.png" class="logo">
-						<button type="button" class="btn">Sign up</button>
+						
+							
+
+							
 					</div>
 				</div>
 
@@ -55,6 +59,8 @@
 			<button type="button" class="btn">Get Membership Now</button>
 
 		</div>
+
+		<!-------------------------------------------LOGIN FORM---------------------->
 	<div class="popup" id="form">
 					<div class="popup-content">
 						<span onclick="closeForm()"><img src="img/close.png" class="close"></span>
@@ -84,7 +90,7 @@
 					</div>
 				</div>
 			
-
+	<!-------------------------------------LOGIN FORM---------------------->
 
 		<div class="sidebar">
 
@@ -101,6 +107,7 @@
 			<span onclick="admin()"><img src="img/admin.png"></span>
 
 			</div>
+	<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
 
 
 <!-- The overlay -->
@@ -112,15 +119,15 @@
   <!-- Overlay content -->
   <div class="overlay-content">
   	<a href="#" onclick="openLogin()">Login</a>
-    <a href="#">Services</a>
-    <a href="#">Classes</a>
+    <a href="#mid">Services</a>
+    <a href="#">Blog</a>
+    <a href="#">Class</a>
     <a href="#">Contact</a>
     <a href="#">About</a>
   </div>
 
 </div>
 
-<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
 
 
 </div>
@@ -140,11 +147,9 @@
 
 
 
-		<!----- -----------------------Navagation-------------------------->
+		
 	
 
-		<!-----------------------------LOGIN------------------------------->
-		
 
 
 
@@ -152,133 +157,136 @@
 	<!------------------------------BODY--------------------------------------->	
 
 	</div>
-	<script>
-
-/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
-
-
-function admin(){
-	 	document.getElementById("form").style.display = "flex";
-
-	 }
-	 function closeForm(){
-	 	document.getElementById("form").style.display = "none";
-
-	 }
-	 function openLogin(){
-	 	document.getElementById("form2").style.display = "flex";
-	 	document.getElementById("myNav").style.width = "0%";
-
-	 }
-	 function closeForm2(){
-	 	document.getElementById("form2").style.display = "none";
-
-	 }
-
-</script>
-	
-
-	<div class="work">
-
-		<h1>Workout From Home</h1>
-
-	</div>
-
-
-<div class="box">
-
-		<div class="text-work">
-
-		
-		<p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts, healthy recipes and informative articles, as well as<p> one of the most positive communities on the web, you’ll have everything you need to reach your personal fitness goals</p></p>
-
-		<div class="join">
-			
-			<a href="orf.html"><h2>Join now!</h2></a>
-
-		</div>
-
-	</div>
-	<div class="text-work">
-		<img src="pic101.png">
-
-	</div>
-
-
-
-</div>
-
-
-
-
-
 
 
 
 	
 	<div class="title-program">
 		
-<h1>PROGRAMS</h1>
-<hr>
+<h1>Services We Offered</h1>
+<br>
+<h5>We believe fitness should be accessible to everyone, everywhere, <br>regardless of income or access to a gym.</h5>
+</div>
+	<div class="wrapper">
+
+		<div class="card">
+			<img src="https://www.inlifehealthcare.com/wp-content/uploads/2016/11/stock-footage-aerobics-class-stepping-together-led-by-instructor-and-lifting-dumbbells-at-the-gym.jpg"></a>
+		
+			<div class="info">
+				<h1>Class</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+		</div>
+
+<div class="card">
+		<img src="https://www.crushpixel.com/big-static16/preview4/man-doing-squats-using-squat-2471027.jpg">
+
+		
+			<div class="info">
+				<h1>Workout From Home</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+		</div>
+<div class="card">
+		
+			<img src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY0OTE4ODAzMDQwMzE0Njg1/yoga-gettyimages-1142820079-promo.jpg">
+
+		
+			<div class="info">
+				<h1>Clubs</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+		</div>
+
 	</div>
-<div class="programs">
+
+
+
+<div class="classes">
+	<div class="class-info">
+	<h2>Attend Free <br>
+	Class</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore<br> et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation <br>ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure <br>dolor in reprehenderit in <br>voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur.</p>
+			</div>	<img src="https://i.ytimg.com/vi/FL_fAd_K720/maxresdefault.jpg">	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+
+
+
+
+
+		
+
+
 	
 
-	<div class="images">
-		
-		<a href="#"><img src="https://www.inlifehealthcare.com/wp-content/uploads/2016/11/stock-footage-aerobics-class-stepping-together-led-by-instructor-and-lifting-dumbbells-at-the-gym.jpg"></a>
-		<p>4 Weeks Programs / 30mins a Day</p>
-		<h2>AEROBICS</h2>
-		<p>Burn Muscle and keep healthy</p>
-	</div>
-	<div class="images">
-		<a href="#"><img src="https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY0OTE4ODAzMDQwMzE0Njg1/yoga-gettyimages-1142820079-promo.jpg"></a>
-		<p>4 Weeks Programs / 30mins a Day</p>
-		<h2>YOGA</h2>
-		<p>Burn Muscle and keep healthy</p>
-	</div>
-	<div class="images">
-		<a href="#"><img src="https://www.crushpixel.com/big-static16/preview4/man-doing-squats-using-squat-2471027.jpg"></a>.
-		<p>4 Weeks Programs / 30mins a Day</p>
-		<h2>BODY BUILDUP</h2>
-		<p>Burn Muscle and keep healthy</p>
 
 
-
-	</div>
-
-
-
-
-	</div>
-
-
-
-
-
-
-</div>
 <br>
 <br>
 
-    	<div class="view-all">
-		
-		<a href="#"><p>View All Classes</h1></p>
-
-	</div>
+    	
 	<br>
 	<br>
 
-
+<hr>
 
 
 
@@ -300,7 +308,7 @@ function admin(){
 			<ul>
 				<li class="bot"><a href="">SOCIAL MEDIA</a></li>
 				<li class="bot"><a href="">EVENTS</a></li>
-				<li class="bot"><a href="">ANNOUNCEMENTS</a></li>
+			
 			</ul>
 		</div>
 		<div>
@@ -312,10 +320,8 @@ function admin(){
 		</div>
 		<div>
 			<ul>
-				<li class="bot"><a href="">STORE</a></li>
-				<li class="bot"><a href="">CONTACT US</a></li>
-				<li class="bot"><a href="">CART</a></li>
-				<li class="bot"><a href="">USER</a></li>
+			
+				
 			</ul>
 		</div>
 	</div>
