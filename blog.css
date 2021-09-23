@@ -15,7 +15,9 @@ body {
   background: white;
 }
 
-.column {   
+.column {
+  position: relative;
+  left: 200px;
   width: 70%;
 }
 
@@ -51,6 +53,18 @@ body {
   text-align: center;
   background: #ddd;
   margin-top: 20px;
+}
+
+#more {
+  display: none;
+}
+.btndes{
+  font-size: 12px;
+  padding: 12px 24px;
+  border-radius: 25px;
+}
+.btndes:hover {
+  background-color: #e7e7e7;
 }
 
 @media screen and (max-width: 800px) {
