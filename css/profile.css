@@ -1,0 +1,283 @@
+/* GENERAL STYLES */
+
+* {
+  box-sizing: border-box;
+  height: auto;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* SECTIONS */
+
+[id^="sec-"] {
+  display: block;
+  margin: 20px 10px;
+  float: left;
+}
+
+#sec-left {
+  width: 33%;
+  width: calc(33% - 30px);
+  margin-left: 20px;
+}
+
+#sec-mid {
+  width: 42%;
+  width: calc(42% - 20px);
+}
+
+#sec-right {
+  width: 25%;
+  width: calc(25% - 30px);
+  margin-right: 20px;
+}
+
+/* SECTIONS - CONTENT */
+
+div[id^="sec-"] > div:not(#clubs), .card-club {
+  padding: 10px;
+  margin-bottom: 20px!important;
+  border-radius: 1em;
+  background-color: white;
+}
+
+div[id^="sec-"] > div > *, .card-club > *, #clubs > h2 {
+  margin: 10px;
+}
+
+/* LEFT SECTION */
+
+/* user card */
+
+#user-card {
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+
+#user-card > div:not(#photo):not(#top-card), #monthly-class > *:not(#top-class):not(#register-class) {
+  grid-column: 1 / span 2;
+}
+
+#photo {
+  float: left;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+#top-card > p {
+  font-size: 13px;
+  font-style: italic;
+}
+
+#renewbtn {
+  background-color: black;
+  border-radius: 75px;
+  padding: 1px 6px;
+  font-style: initial;
+  color: white;
+}
+
+#editbtn {
+  background-color: black;
+  color: white;
+  border-radius: 75px;
+  text-align: center;
+  padding: 3px;
+}
+
+/* calendar */
+
+#top-cal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#mid-cal {
+
+}
+
+#cal-dow {
+  border-top: 1px solid lightgray;
+}
+
+#cal-dow, #cal-dow > div, #cal-date, #cal-date > div {
+  display: flex;
+  align-items: center;
+}
+
+#cal-dow > div, #cal-date > div:not(#cal-empty) {
+  flex: 0 0 calc(100% / 7);
+  aspect-ratio: 1/1;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#cal-date {
+  flex-wrap: wrap;
+  border-bottom: 1px solid lightgray;
+}
+
+#cal-empty {
+  flex: 0 0 calc(calc(100% / 7) * 3)!important;
+  aspect-ratio: 3/1;
+}
+
+.remove {
+  display: none!important;
+}
+
+.cal-event {
+  background-color: black;
+  color: white;
+}
+
+.cal-now {
+  background-color: greenyellow;
+  color: white;
+}
+
+.cal-active {
+  background-color: purple;
+  color: white;
+}
+
+#btm-cal > h4 {
+  text-align: center;
+}
+
+#btm-cal > div {
+  display: grid;
+  grid-template-columns: 20% auto;
+  align-items: center;
+  grid-gap: 6px;
+  margin: 6px 0;
+}
+
+.agenda-time {
+  padding: 12px 0;
+  border-radius: 5px;
+
+  display: inherit;
+  justify-content: center;
+  align-items: inherit;
+
+  background-color: black;
+  color: white;
+}
+
+#btm-cal > div > p {
+  padding: 12px 3px;
+
+  display: inherit;
+  align-items: inherit;
+
+  border-left: 3px solid black;
+}
+
+/* MIDDLE SECTION */
+
+/* monthly class */
+
+#monthly-class {
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: center;
+}
+
+#registerbtn {
+  background-color: purple;
+  color: white;
+  border-radius: 75px;
+  text-align: center;
+  padding: 5px;
+}
+
+#register-class > p {
+  text-align: center;
+  font-size: 12px;
+}
+
+#monthly-class > p {
+  text-align: justify;
+}
+
+#monthly-class > h4 {
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  padding: 3px;
+}
+
+#monthly-dow {
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+  grid-gap: 3px;
+}
+
+#monthly-dow > div {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  display: inherit;
+  justify-content: center;
+  align-items: inherit;
+
+  background-color: lightgray;
+  color: white;
+}
+
+#monthly-dow > p {
+  padding: 3px 6px;
+  text-align: justify;
+  border-radius: 15px;
+  color: lightgray;
+}
+
+.dow-active {
+  background-color: purple!important;
+  color: white!important;
+  border-radius: 15px;
+}
+
+/* clubs */
+
+#clubs > * {
+  margin: 0;
+}
+
+.card-club > div {
+  border-top: 1px solid lightgray;
+  margin-bottom: 0;
+}
+
+.card-club > div > a {
+  margin: 10px 3px;
+  float: right;
+}
+
+/* RIGHT SECTION */
+
+#sec-right > div {
+  text-align: center;
+}
+
+#events {
+
+}
