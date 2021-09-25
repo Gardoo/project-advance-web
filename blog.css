@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
@@ -12,13 +11,15 @@ body {
   background-attachment: fixed;
 }
 
-
 .column {
   position: relative;
   left: 180px;
   width: 70%;
 }
-
+.title{
+  border-bottom: 4px solid lightgray;
+  width: 100%;
+}
 .img1 {
   background-image: url('FOOD.jpg');
   background-size: cover;
@@ -38,7 +39,10 @@ body {
    background-color: white;
    padding: 20px;
    margin-top: 20px;
-   border-radius: 10px;
+   border-radius: 25px;
+   border: 1px solid;
+   padding: 10px 40px;
+   box-shadow: 5px 10px #a3a3c2;
 }
 
 .row:after {

@@ -23,7 +23,9 @@ body{
 		max-width: 650px;
 		background: white;
 		padding: 10px 40px;
-		border-radius: 10px;
+		border-radius: 25px;
+		border: 1px solid;
+		box-shadow: 5px 10px #a3a3c2;
 }
 .mform .title{
 		font-size: 40px;
@@ -38,7 +40,7 @@ body{
 		left: 0;
 		bottom: 0;
 		height: 4px;
-		width: 570px;
+		width: 100%;
 		background: lightgray;
 }
 .mform form .user-info{
