@@ -65,9 +65,11 @@ body {
   font-size: 12px;
   padding: 12px 24px;
   border-radius: 25px;
+  background-color: #99c2ff;
+
 }
 .btndes:hover {
-  background-color: #e7e7e7;
+  background-color: #66a3ff;
 }
 
 @media screen and (max-width: 800px) {
