@@ -24,8 +24,8 @@
 			<a href="#"><i class="far fa-calendar"></i> 	Calendar</a>
 			<a href="#"><i class="fas fa-home"></i>	Homepage</a>
 			<a href="#"><i class="fas fa-archive"></i> 	Archive</a>
-			<a href="#"><i class="fas fa-gifts"></i> 	Manage Admin Account</a>
-			<a href="#"><i class="fas fa-user-cog"></i> 	Change Password</a>
+			<a href="#" onclick="manage()"><i class="fas fa-gifts"></i> 	Manage Account</a>
+			
 			<a href="#"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
 		</div>
 
@@ -76,9 +76,23 @@
 
 	</div>
 
+			<div class="admin-settings">
+				<h1>Manage Settings</h1>
+				<div class="manage-content">
+				<div class="settings">
+					<h2>Change Password</h2>
+				</div>
+				<div class="settings">
+					<h2>Add Admin Account</h2>
+				</div>
+				<div class="settings">
+					<h2>Change Username</h2>
+				</div>
+				</div>
+			
+			</div>
 
-
-
+				
 
 </body>
 </html>

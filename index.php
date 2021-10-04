@@ -67,8 +67,8 @@
 
 					<img src="img/admin.png">
 					<h3>Admin Login</h3>
-					<input type="username" placeholder="Username">
-					<input type="password" placeholder="Password">
+					<input type="username" name="Username" placeholder="Username">
+					<input type="password" name="Password" placeholder="Password">
 					
 					<a href="#" class="btn">Login</a>
 
