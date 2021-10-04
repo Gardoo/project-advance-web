@@ -4,7 +4,7 @@
 	<head>
 		<title>Registration Form</title>
 		<link rel="icon" href="img/gofit_logo.png" type="image/icon type">
-		<link rel="stylesheet" href="css/style2.css">
+		<link rel="stylesheet" href="css/orf.css">
 	</head>
 <body>
 

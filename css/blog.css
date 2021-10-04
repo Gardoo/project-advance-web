@@ -5,7 +5,7 @@
 body {
   font-family: Arial;
   padding: 20px;
-  background-image: url('BLOG.jpg');
+  background-image: url('../img/blog.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,14 +21,14 @@ body {
   width: 100%;
 }
 .img1 {
-  background-image: url('FOOD.jpg');
+  background-image: url('../img/food.jpg');
   background-size: cover;
   background-repeat: no-repeat; 
   width: 100%;
   padding: 20px;
 }
 .img2 {
-  background-image: url('BB.jpg');
+  background-image: url('../img/bodybuilding.jpg');
   background-size: cover;
   background-repeat: no-repeat; 
   width: 100%;
@@ -65,9 +65,11 @@ body {
   font-size: 12px;
   padding: 12px 24px;
   border-radius: 25px;
+  background-color: #99c2ff;
+
 }
 .btndes:hover {
-  background-color: #e7e7e7;
+  background-color: #66a3ff;
 }
 
 @media screen and (max-width: 800px) {
