@@ -71,7 +71,7 @@
 					<input type="username" name="Username" placeholder="Username">
 					<input type="password" name="Password" placeholder="Password">
 					
-					<a href="#" class="btn">Login</a>
+					<a href="#" class="btn" name="login_user">Login</a>
 
 					</div>
 				</div>
@@ -83,10 +83,10 @@
 
 					<img src="img/admin.png">
 					<h3>Account Login</h3>
-					<input type="username" placeholder="Username">
-					<input type="password" placeholder="Password">
+					<input type="email" placeholder="email" name="email">
+					<input type="password" placeholder="Password" name="password">
 					
-					<a href="#" class="btn">Login</a>
+					<a href="#" class="btn" >Login</a>
 
 					</div>
 				</div>
