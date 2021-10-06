@@ -22,7 +22,7 @@
 			<a href="#"><i class="fas fa-columns"></i> 	Dashboard</a>
 			<a href="#"><i class="fas fa-blog"></i> 	Blog</a>
 			<a href="#"><i class="far fa-calendar"></i> 	Calendar</a>
-			<a href="#"><i class="fas fa-home"></i>	Homepage</a>
+			<a href="index.php"><i class="fas fa-home"></i>	Homepage</a>
 			<a href="#"><i class="fas fa-archive"></i> 	Archive</a>
 			<a href="#" onclick="manage()"><i class="fas fa-gifts"></i> 	Manage Account</a>
 			

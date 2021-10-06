@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
 
 
 
-<div class="container">
+<div class="container" id="homepage">
 
 
 			<div id="bg-woman">
@@ -43,7 +44,7 @@
 					</div>
 					<div class="navbar" id="">
 
-						<img src="C:\Users\Gardo\Desktop\FITNESS\project-advance-web\img\gofit_banner.png" class="logo">
+						<img src="project-advance-web\img\gofit_banner.png" class="logo">
 						
 							
 
@@ -56,7 +57,7 @@
 		<div class="content">
 			<h3>Welcome to our</h3>
 			<h1>Fitness <br>Gym Club</h1>
-			<button type="button" class="btn">Get Membership Now</button>
+		<a href="registration.php"><button type="button" class="btn"> Get Membership Now</button></a>
 
 		</div>
 
