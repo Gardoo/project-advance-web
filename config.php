@@ -20,7 +20,7 @@ $rs = mysqli_query($con, $sql);
 
 if($rs)
 {
-    echo "Contact Records Inserted";
+  header('Location: http://localhost/project-advance-web/');
 } else {
   echo mysqli_error($con);
 }
