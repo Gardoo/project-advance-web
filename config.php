@@ -21,6 +21,8 @@ $rs = mysqli_query($con, $sql);
 if($rs)
 {
     echo "Contact Records Inserted";
+} else {
+  echo mysqli_error($con);
 }
 
 
