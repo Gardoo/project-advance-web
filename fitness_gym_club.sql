@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2021 at 04:17 AM
+-- Generation Time: Oct 07, 2021 at 04:31 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -46,7 +46,7 @@ CREATE TABLE `register` (
   `birthday` date NOT NULL,
   `gender` char(1) NOT NULL,
   `pnum` int(20) NOT NULL,
-  `address` int(20) NOT NULL,
+  `address` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `pword` varchar(20) NOT NULL,
   `confirm_pword` varchar(20) NOT NULL
@@ -61,6 +61,16 @@ CREATE TABLE `register` (
 --
 ALTER TABLE `register`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `register`
+--
+ALTER TABLE `register`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
