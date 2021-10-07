@@ -1,4 +1,4 @@
-<?php include('config.php')?>
+
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +9,7 @@
 	</head>
 <body>
 
-	<form method="post" action="register.php"></form>
+	<form method="post" action="config.php">
 	<div class="position">
 
 	<div class="mform">
@@ -31,12 +31,12 @@
 			</div>
 			
 			
-			<form >
+		
 				<label for="birthday">Birthday</label>
 				<input type="date" id="birthday" name="birthday" name="birthday" required="">
 
 
-			</form>
+			
 			
 			
 			
@@ -82,11 +82,12 @@
 
     <div class="clearfix">
       <a href="index.php"><button type="button" class="cancelbtn" name="reg_user" >Cancel</button></a>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" class="signupbtn" name="submit">Sign Up</button>
     </div>
 
+	
+	</div>
+	</div>
 	</form>
-	</div>
-	</div>
 </body>
 </html>

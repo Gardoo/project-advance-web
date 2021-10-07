@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2021 at 09:30 AM
+-- Generation Time: Oct 07, 2021 at 04:06 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -24,20 +24,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `fname` varchar(11) NOT NULL,
-  `lname` varchar(11) NOT NULL,
-  `pnumber` int(11) NOT NULL,
-  `address` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
-  `pword` int(11) NOT NULL,
-  `confirm_pword` int(11) NOT NULL,
-  `birthday` int(11) NOT NULL
+CREATE TABLE `admin` (
+  `username` varchar(16) NOT NULL,
+  `password` int(8) NOT NULL,
+  `confirm_pw` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+CREATE TABLE `register` (
+  `id` int(20) NOT NULL,
+  `fname` varchar(20) NOT NULL,
+  `lname` varchar(20) NOT NULL,
+  `birthday` date NOT NULL,
+  `gender` char(1) NOT NULL,
+  `pnum` int(20) NOT NULL,
+  `address` int(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `pword` varchar(20) NOT NULL,
+  `confirm_pword` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `register`
+--
+ALTER TABLE `register`
+  ADD PRIMARY KEY (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
