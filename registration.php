@@ -4,16 +4,17 @@
 
 	<head>
 		<title>Registration Form</title>
+			<link rel="stylesheet" type="text/css" href="css/orf.css">
 		<link rel="icon" href="img/gofit_logo.png" type="image/icon type">
-		<link rel="stylesheet" href="css/orf.css">
+	
 	</head>
 <body>
 
-	<form method="post" action="config.php">
+
 	<div class="position">
 
 	<div class="mform">
-	
+		<form method="post" action="config.php" >
 	<div class="title">Online Registration Form</div>
 	
 	<form method="post" action="registration.php">
@@ -82,12 +83,17 @@
 
     <div class="clearfix">
       <a href="index.php"><button type="button" class="cancelbtn" name="reg_user" >Cancel</button></a>
-      <button type="submit" class="signupbtn" name="submit">Sign Up</button>
+      <button type="submit" id="signUp" class="signupbtn" name="submit" onclick="signup">Sign Up</button>
+
     </div>
+
 
 	
 	</div>
+
 	</div>
-	</form>
+		</form>
+	
+
 </body>
 </html>

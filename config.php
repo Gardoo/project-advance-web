@@ -20,7 +20,11 @@ $rs = mysqli_query($con, $sql);
 
 if($rs)
 {
-  header('Location: http://localhost/project-advance-web/');
+  echo '<script type="text/javascript">'; 
+echo 'alert("Press Okay to Login Your Account in Homepage");'; 
+echo 'window.location.href = "index.php";';
+echo '</script>';
+ // header('Location: http://localhost/project-advance-web/profile.php');
 } else {
   echo mysqli_error($con);
 }

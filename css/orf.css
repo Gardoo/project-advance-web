@@ -8,20 +8,24 @@ a{
 		box-sizing: border-box;
 		font-family: sans-serif;
 }
+
+}
 body{
+		
 		display: flex;
 		height: 100vh;
 		justify-content: center;
 		align-items: center;
 		padding: 10px;
 		color: black;
-		background-image: url('../img/orf.jpg');
+		
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 }
 .position{
 	position: absolute;
 	left: 590px;
+background-image:url('img/regbg.jpg');
 }
 .mform{
 		max-width: 650px;
@@ -29,7 +33,10 @@ body{
 		padding: 10px 40px;
 		border-radius: 25px;
 		border: 1px solid;
-		box-shadow: 5px 10px #a3a3c2;
+		margin-top: 100px;
+
+		
+	
 }
 .mform .title{
 		font-size: 40px;
@@ -48,10 +55,12 @@ body{
 		background: lightgray;
 }
 .mform form .user-info{
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 20px 0 12px 0;
+		top: 10;
 }
 .t-box1{
 		margin-bottom: 10px;
