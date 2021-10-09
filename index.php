@@ -181,8 +181,10 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat.</p>
 			</div>
-		</div>
 
+		</div>
+		<br><br><br><br><br>
+<h1>Class, Workout From Home, Clubs</h1>
 	</div>
 
 

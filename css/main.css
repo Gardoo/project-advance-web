@@ -200,6 +200,7 @@ body {
 	transform: skew(5deg);
 
 }
+
 .card{
 	width: 280px;
 	height: 360px;
@@ -276,7 +277,7 @@ body {
 .classes{
 
 display: flex;
-margin-top: 300px;
+margin-top: 200px;
 
 
 }
