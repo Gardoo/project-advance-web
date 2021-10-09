@@ -1,3 +1,7 @@
+<?php
+   session_start()
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +30,7 @@
 			<a href="#"><i class="fas fa-archive"></i> 	Archive</a>
 			<a href="#" onclick="manage()"><i class="fas fa-gifts"></i> 	Manage Account</a>
 			
-			<a href="#"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
+			<a href="index.php"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
 		</div>
 
 			<div class="admin-content">

@@ -44,9 +44,10 @@
 					</div>
 					<div class="navbar" id="">
 
-						<img src="project-advance-web\img\gofit_banner.png" class="logo">
-						
-							
+						<img src="img\gofit_banner.png" class="logo">
+
+
+			
 
 							
 					</div>
@@ -62,38 +63,12 @@
 		</div>
 
 		<!-------------------------------------------LOGIN FORM---------------------->
-	<div class="popup" id="form">
-					<div class="popup-content">
-						<span onclick="closeForm()"><img src="img/close.png" class="close"></span>
+	
 
-					<img src="img/admin.png">
-					<h3>Admin Login</h3>
-					<input type="username" name="Username" placeholder="Username">
-					<input type="password" name="Password" placeholder="Password">
-					
-					<a href="#" class="btn" name="login_user">Login</a>
-
-					</div>
-				</div>
-					</div>
-
-	<div class="popup" id="form2">
-					<div class="popup-content">
-						<span onclick="closeForm2()"><img src="img/close.png" class="close"></span>
-
-					<img src="img/admin.png">
-					<h3>Account Login</h3>
-					<input type="email" placeholder="email" name="email">
-					<input type="password" placeholder="Password" name="password">
-					
-					<a href="#" class="btn" >Login</a>
-
-					</div>
-				</div>
-			
 	<!-------------------------------------LOGIN FORM---------------------->
 
 		<div class="sidebar">
+
 
 			<div class="social-links">
 			<a href="">	<img src="img/fb.png"></a>
@@ -105,7 +80,7 @@
 				<img src="img/share.png">
 				<img src="img/info.png">
 
-			<span onclick="admin()"><img src="img/admin.png"></span>
+		<a href="login.php"><img src="img/admin.png"></span></a>
 
 			</div>
 	<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
@@ -119,7 +94,7 @@
 
   <!-- Overlay content -->
   <div class="overlay-content">
-  	<a href="#" onclick="openLogin()">Login</a>
+  	<a href="user_login.php">Login</a>
     <a href="#mid">Services</a>
     <a href="#">Blog</a>
     <a href="#">Class</a>
@@ -183,7 +158,7 @@
 		</div>
 
 <div class="card">
-		<img src="https://www.crushpixel.com/big-static16/preview4/man-doing-squats-using-squat-2471027.jpg">
+		<img src="https://www.phillymag.com/wp-content/uploads/sites/3/2020/04/at-home-workout-getty-main.jpg">
 
 		
 			<div class="info">
@@ -206,8 +181,10 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat.</p>
 			</div>
-		</div>
 
+		</div>
+		<br><br><br><br><br>
+<h1>Class, Workout From Home, Clubs</h1>
 	</div>
 
 

@@ -1,19 +1,20 @@
-<?php include('config.php')?>
+
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<title>Registration Form</title>
+			<link rel="stylesheet" type="text/css" href="css/orf.css">
 		<link rel="icon" href="img/gofit_logo.png" type="image/icon type">
-		<link rel="stylesheet" href="css/orf.css">
+	
 	</head>
 <body>
 
-	<form method="post" action="register.php"></form>
+
 	<div class="position">
 
 	<div class="mform">
-	
+		<form method="post" action="config.php" >
 	<div class="title">Online Registration Form</div>
 	
 	<form method="post" action="registration.php">
@@ -30,27 +31,13 @@
 				<input type="text" placeholder="Last Name" name="lname" required>
 			</div>
 			
-<<<<<<< Updated upstream
 			
-			<form >
-				<label for="birthday">Birthday</label>
-				<input type="date" id="birthday" name="birthday" name="birthday" required="">
-
-
-			</form>
-=======
-			<div class="t-box1">
-				<span class="details">Username</span>		
-				<input type="text" placeholder="Username" name="username" required>
-			</div>
 		
-		<div class="t-box1">
 				<label for="birthday">Birthday</label>
 				<input type="date" id="birthday" name="birthday" name="birthday" required="">
 
-</div>
+
 			
->>>>>>> Stashed changes
 			
 			
 			
@@ -96,11 +83,17 @@
 
     <div class="clearfix">
       <a href="index.php"><button type="button" class="cancelbtn" name="reg_user" >Cancel</button></a>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" id="signUp" class="signupbtn" name="submit" onclick="signup">Sign Up</button>
+
     </div>
 
-	</form>
+
+	
 	</div>
+
 	</div>
+		</form>
+	
+
 </body>
 </html>
