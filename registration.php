@@ -30,6 +30,7 @@
 				<input type="text" placeholder="Last Name" name="lname" required>
 			</div>
 			
+<<<<<<< Updated upstream
 			
 			<form >
 				<label for="birthday">Birthday</label>
@@ -37,6 +38,19 @@
 
 
 			</form>
+=======
+			<div class="t-box1">
+				<span class="details">Username</span>		
+				<input type="text" placeholder="Username" name="username" required>
+			</div>
+		
+		<div class="t-box1">
+				<label for="birthday">Birthday</label>
+				<input type="date" id="birthday" name="birthday" name="birthday" required="">
+
+</div>
+			
+>>>>>>> Stashed changes
 			
 			
 			
