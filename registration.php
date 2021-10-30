@@ -32,16 +32,14 @@
 			</div>
 			
 			
-		
+		<div class="birthday">
 				<label for="birthday">Birthday</label>
+		<div class="birthday">
 				<input type="date" id="birthday" name="birthday" name="birthday" required="">
+		</div>
+		</div>
 
 
-			
-			
-			
-			
-			
 			<div class="gender">
 			<span class="">Gender:</span>
 			<div class="category"  >
