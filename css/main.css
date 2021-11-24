@@ -1,7 +1,4 @@
-
-/* GENERAL STYLES */
-
-
+/*============ GENERAL STYLES ============*/
 * {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -9,46 +6,41 @@
   padding: 0;
 }
 
-
-
 body {
-	margin: 0;
+	margin: 0; /* 3 test */
 	padding: 0;
 	border: 0;
 	height: 0;
 	scroll-behavior: smooth;
-	background-color: ;
 }
 
 #bg-woman {
-	background-image: url(https://c4.wallpaperflare.com/wallpaper/403/859/595/woman-muscles-pose-silhouette-wallpaper-preview.jpg);
-    background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-
 	position: relative;
 	height: 100vh;
 	width: 100vw;
+
+	background-image: url(https://c4.wallpaperflare.com/wallpaper/403/859/595/woman-muscles-pose-silhouette-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .custom-shape-divider-bottom-1632050936 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 }
 
 .custom-shape-divider-bottom-1632050936 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .custom-shape-divider-bottom-1632050936 .shape-fill {
-    fill: #FFFFFF;
+	fill: #FFFFFF;
 }
 
 
