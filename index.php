@@ -139,7 +139,10 @@
 	
 	<div class="title-program">
 		
-<h1>Services We Offered</h1>
+<h1>Services We Offered</h1><br>
+<center>
+<div class="unline"></div>
+</center>
 <br>
 <h5>We believe fitness should be accessible to everyone, everywhere, <br>regardless of income or access to a gym.</h5>
 </div>
@@ -181,28 +184,46 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat.</p>
 			</div>
-
 		</div>
-		<br><br><br><br><br>
-<h1>Class, Workout From Home, Clubs</h1>
 	</div>
+	<br><br>
+<center>
+
+	<h1>Class, Workout From Home, Clubs</h1>
 
 
-
-<div class="classes">
-	<div class="class-info">
-	<h2>Attend Free <br>
-	Class</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore<br> et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation <br>ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure <br>dolor in reprehenderit in <br>voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur.</p>
-			</div>	<img src="https://i.ytimg.com/vi/FL_fAd_K720/maxresdefault.jpg">	
+<div class="title-program">
+<h1>GoFit Highlights</h1><br>
+<center>
+<div class="unline"></div>
+</center>
+<br>
+<h5>Find what you need in your fitness journey.</h5>
 </div>
 
+<div>
+  <img class="mySlides" src="img/SL1.jpg" width="90%" height="650px">
+  <img class="mySlides" src="img/SL2.jpg" width="90%" height="650px">
+  <img class="mySlides" src="img/SL3.jpg" width="90%" height="650px">
+</div>
+<script>
+var myIndex = 0;
+carousel();
 
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
 
+</center>
 
 
 
@@ -244,35 +265,14 @@ function topFunction() {
 </script>
 
 
-
-
-
-
-
-
-		
-
-
-	
-
-
-
 <br>
 <br>
 
-    	
-	<br>
-	<br>
-
-<hr>
-
-
-
-
+<!------------------------------------bottom nav br ---------------------------------------->
 
 	<div id="botbar">
-		<div class="logo">
-			LOGO
+		<div class="logobot">
+			<img src="img/gofit_banner.png" >
 		</div>
 		<div>
 			<div class="div-bot">SUBSCRIPTIONS</div>
@@ -286,7 +286,6 @@ function topFunction() {
 			<ul>
 				<li class="bot"><a href="">SOCIAL MEDIA</a></li>
 				<li class="bot"><a href="">EVENTS</a></li>
-			
 			</ul>
 		</div>
 		<div>
