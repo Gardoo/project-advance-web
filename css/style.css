@@ -1,0 +1,305 @@
+/*============ GENERAL STYLES ============*/
+:root {
+
+}
+
+* {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+/*============ LANDING PAGE ============*/
+
+/*------------ Viewport Home ------------*/
+.home {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+
+.home > * {
+	position: absolute;
+}
+
+#bg-woman {
+	background-image: url(https://c4.wallpaperflare.com/wallpaper/403/859/595/woman-muscles-pose-silhouette-wallpaper-preview.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.custom-shape-divider-bottom-1632050936 {
+	width: 100vw;
+	left: 0;
+	bottom: 0;
+}
+
+.custom-shape-divider-bottom-1632050936 > svg {
+	position: relative;
+	display: block;
+	height: auto;
+	width: inherit;
+}
+
+.custom-shape-divider-bottom-1632050936 .shape-fill {
+	fill: white;
+}
+
+.logo {
+	left: 50px;
+	top: -50px;
+	width: 200px;
+	cursor: pointer;
+}
+
+.welcome {
+	height: inherit;
+	left: 10%;
+	color: #fbfcfd;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.welcome > h1{
+	font-size: 80px;
+	margin: 10px 0 30px;
+	font-family: CfSpaceshipRegular-2d4e;
+	text-shadow: 3px 3px gray;
+}
+
+.btn {
+	color: #fbfcfd;
+	padding: 10px 25px;
+	background: transparent;
+	border-radius: 20px;
+	outline: none;
+	cursor: pointer;
+}
+
+.sidebar {
+	height: calc(100vh - 5%);
+	width: 5%;
+	right: 0;
+	padding: 2% 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.menu {
+	height: 25px;
+	cursor: pointer;
+}
+
+.links > *, .links > * > img {
+	width: 30px;
+	margin: 5px auto;
+	cursor: pointer;
+}
+
+/*------------ menu overlay ------------*/
+.overlay {
+	position: fixed;
+	height: 100vh;
+	width: 0;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s;
+
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 1.9);
+}
+
+.overlay-content {
+	position: relative;
+	width: 100%;
+	top: 25%;
+	text-align: center;
+}
+
+.overlay a {
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  	color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*------------ Programs Offered ------------*/
+.programs {
+	padding: 30px 0 20px;
+	margin: 100px 0 50px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+.wrapper {
+	margin-left: 1%;
+	display: flex;
+	justify-content: space-around;
+	transform: skew(5deg);
+}
+
+.card:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+	background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+	z-index: 1;
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.card:hover:before {
+	opacity: 1;
+}
+
+.card {
+	position: relative;
+	width: 280px;
+	height: 360px;
+	padding: 3rem 1rem 0;
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+	
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+	transform: translateY(20px);
+}
+
+.card:hover > .info {
+	opacity: 1;
+}
+
+.card > img {
+	position: absolute;
+	width: 112%;
+	height: 100%;
+	top: 0;
+	left: -6%;
+	object-fit: cover;
+	transform: skew(-5deg);
+}
+
+.info {
+	position: relative;
+	left: 3%;
+	z-index: 2;
+	color: #fff;
+	transform: 0.5s all;
+	opacity: 0;
+	transform: skew(-5deg);
+}
+
+.info > p {
+	letter-spacing: 1px;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+.offers {
+	padding: 30px 0 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+/*------------ Free Classes ------------*/
+.classes {
+	display: flex;
+	flex-direction: row;
+}
+
+.classes > * {
+	border-radius: 1rem;
+}
+
+.classes > img {
+	width: 60vw;
+	height: auto;
+}
+
+.class-info {
+	position: relative;
+	width: calc(40vw - 10px);
+	border: solid pink 5px;
+	padding: 100px 0;
+}
+
+.class-info > h2 {
+	position: relative;
+	font-size: 60px;
+	border: solid black 3px;
+	margin: 0 1rem 1rem;
+}
+
+.class-info > p {
+	margin: 0 1rem;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*------------ Go Top ------------*/
+#go-top {
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+	z-index: 99;
+	display: none;
+	padding: 15px;
+	border: none;
+	border-radius: 4px;
+	font-size: 18px;
+	outline: none;
+	color: white;
+	background-color: red;
+	
+	cursor: pointer;
+}
+
+#go-top:hover {
+	background-color: #555;
+}
