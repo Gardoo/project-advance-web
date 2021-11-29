@@ -26,7 +26,7 @@
       <p><br>
 What Is It?
 <br><br>
-Rather than calorie deficit as advocated by many diets, Volumetrics Eating focuses on low caloric density. That is, foods that are high in nutrients but low in calories. This enables you to eat a large amount of food – to the point of satiety – without overloading on calories. Instead, you will fill up on foods that are high in fibre and water such as fruits, vegetables, beans, and lean proteins. Because fibre and protein take longer to digest, they keep you feeling full longer. It is this “eat more for less” approach that helps you to<span id="dots">...</span><span id="more"> lose excess weight and keep them off.
+Rather than calorie deficit as advocated by many diets, Volumetrics Eating focuses on low caloric density. That is, foods that are high in nutrients but low in calories. This enables you to eat a large amount of food – to the point of satiety – without overloading on calories. Instead, you will fill up on foods that are high in fibre and water such as fruits, vegetables, beans, and lean proteins. Because fibre and protein take longer to digest, they keep you feeling full longer. It is this “eat more for less” approach that helps you to<span id="dots1">...</span><span id="more1"> lose excess weight and keep them off.
 <br><br>
 How Do You Calculate Caloric Density?
 Divide the number of calories by the weight in grams. A serving of 100g of broccoli, for example, has about 34 calories, which puts its caloric density at 0.34. The plan divides foods into 4 categories according to their caloric density:
@@ -50,7 +50,7 @@ What’s The Downside?
 Some have pointed out the lack of nuts and seeds in the plan due to their high caloric density, yet these are powerhouses of monounsaturated fats and omega-3 fatty acids that contribute to healthy hearts and brains. You also need to be prepared to prepare your own meals; your dine out and takeaway options will be limited as most food providers use high-calorie oils and butters in their cooking.
 <br><br>
 So who should go on the Volumetrics Eating plan? If you’re not a fan of hardcore or trendy diets, have tried them all but to no avail, or find that restrictive eating doesn’t suit you, this may be worth a try (consult your physician before you start). You won’t experience rapid weight loss but can expect an average of two pounds per week, which is the rate that experts recommend as safe and healthy.</span></p>
-      <button onclick="myFunction()" id="myBtn" class="btndes"><i class="fa fa-home"></i>Read more</button>
+      <button id="myBtn1" class="btndes"><i class="fa fa-home"></i>Read more</button>
       </div>
      </div>
 
@@ -66,7 +66,7 @@ So who should go on the Volumetrics Eating plan? If you’re not a fan of hardco
       <div class="img2" style="height:200px;"></div>
       <p>While having a large inventory of free workout videos to choose from is great, it can be a little intimidating to know where to start and how to effectively combine the routines for the fastest results, especially if you are brand new to exercising.
 <br><br>
-     With this in mind, we have methodically blended together the best fusion of our workout videos to facilitate weight loss and fat loss in this inexpensive eBook. Instead of randomly choosing a new routine to do each day, you will have a thoughtfully designed, definite plan<span id="dots">...</span><span id="more"> to follow. Every penny of the proceeds go straight back into funding more gratis workout videos for our viewers.
+     With this in mind, we have methodically blended together the best fusion of our workout videos to facilitate weight loss and fat loss in this inexpensive eBook. Instead of randomly choosing a new routine to do each day, you will have a thoughtfully designed, definite plan<span id="dots2">...</span><span id="more2"> to follow. Every penny of the proceeds go straight back into funding more gratis workout videos for our viewers.
 <br><br>
      This program is challenging and built to bring about fat loss and quick changes in body composition. Our program is fantastic for both beginners who are looking to push themselves, and advanced/experienced individuals who want to challenge their own boundaries and move even further forward in their fitness levels.
 <br><br>
@@ -91,28 +91,47 @@ Here are just a few of the changes that you can expect to see:<br>
      People who have used our programs in the past have seen drastic body changes, including inches, pounds, and body fat percentages lost, & energy, strength, endurance, and flexibility gained.
 <br><br>
 As always, we recommend that you consult with your medical doctor before starting any new workout program.</span></p>
-      <button onclick="myFunction()" id="myBtn2" class="btndes">Read more</button>
+      <button id="myBtn2" class="btndes">Read more</button>
       </div>
   </div>
 </div>
 
 
-<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+<script type="text/javascript">
+//button1
+  var dots1 = document.querySelector("#dots1");
+  var moreText1 = document.querySelector("#more1");
+  var btnText1 = document.querySelector("#myBtn1");
+//button2
+  var dots2 = document.querySelector("#dots2");
+  var moreText2 = document.querySelector("#more2");
+  var btnText2 = document.querySelector("#myBtn2");
+btnText1.addEventListener('click', function(){
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
+  if (dots1.style.display === "none") {
+    dots1.style.display = "inline";
+    btnText1.innerHTML = "Read more"; 
+    moreText1.style.display = "none";
+
   } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
+    dots1.style.display = "none";
+    btnText1.innerHTML = "Read less"; 
+    moreText1.style.display = "inline";
   }
-}
+})
+btnText2.addEventListener('click', function(){
+
+  if (dots2.style.display === "none") {
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "Read more"; 
+    moreText2.style.display = "none";
+
+  } else {
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Read less"; 
+    moreText2.style.display = "inline";
+  }
+})
 </script>
 
 </body>

@@ -187,7 +187,6 @@ body {
 	width: 70%;
 	justify-content: space-around;
 	margin-left: 200px;
-	
 	flex-wrap: wrap;
 	transform: skew(5deg);
 
@@ -383,4 +382,14 @@ margin-top: 200px;
 
 #myBtn:hover {
   background-color: #555;
+}
+
+.mySlides {
+	display:none;
+}
+
+.unline {
+		height: 4px;
+		width: 20%;
+		background: red;
 }

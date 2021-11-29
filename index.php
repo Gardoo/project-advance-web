@@ -100,6 +100,8 @@
 			</div>
 		</div>
 	</div>
+	<br><br>
+<center>
 
 	<!-- PROGRAMS (SUBTITLE) -->
 	<div class="offers">	
@@ -119,13 +121,50 @@
 		<img src="https://i.ytimg.com/vi/FL_fAd_K720/maxresdefault.jpg">	
 	</div>
 
+
+  <div class="title-program">
+    <h1>GoFit Highlights</h1><br>
+    <center>
+      <div class="unline"></div>
+    </center>
+    <br>
+    <h5>Find what you need in your fitness journey.</h5>
+  </div>
+
+  <div>
+    <img class="mySlides" src="img/SL1.jpg" width="90%" height="650px">
+    <img class="mySlides" src="img/SL2.jpg" width="90%" height="650px">
+    <img class="mySlides" src="img/SL3.jpg" width="90%" height="650px">
+  </div>
+
+   <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 4000); // Change image every 2 seconds
+    }
+  </script>
+</center>
+
+<br>
+<br>
+
 	<!-- GO TOP -->
 	<button id="go-top" title="Back to Top">Top</button>
 
 	<!-- FOOTER -->
 	<div id="botbar">
-		<div class="logo">
-			LOGO
+		<div class="logobot">
+			<img src="img/gofit_banner.png" >
 		</div>
 		<div>
 			<div class="div-bot">SUBSCRIPTIONS</div>

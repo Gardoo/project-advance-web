@@ -8,6 +8,7 @@ ul {
 	padding: 0;
 	list-style-type: none;
 	overflow: hidden;
+
 }
 
 li {
@@ -19,11 +20,11 @@ li a, .dropbtn {
 	text-align: center;
 	text-decoration: none;
 	padding: 20px 16px;
-	color: var(--null);
+	color: #999999;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-	color: var(--main);
+	color: black;
 	border-bottom: 2px solid var(--main);
 }
 
@@ -45,6 +46,14 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 .logo {
+	float: left;
+	padding-left: 8px;
+}
+.logobot > img{
+	height: inherit;
+	width: 250px;
+}
+.logobot{
 	float: left;
 	padding-left: 8px;
 }
@@ -144,6 +153,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .bot {
 	width: 100%;
+	text-decoration-color: white;
 }
 
 .bot a:hover {
@@ -154,22 +164,22 @@ li a:hover, .dropdown:hover .dropbtn {
 .div-bot {
 	padding: 18px 0 9px 0;
 	font-weight: bold;
+	color: white;
 }
-
 #botbar {
 	display: grid;
 	grid-template-columns: 40% 15% 15% 15% 15%;
-	height: 254px;
+	height: 200px;
 	padding: 17px;
 	text-align: center;
 	background-color: var(--m-1);
 	color: var(--null);
-	background-color: #2d4a58;
+	background-color: #262626;
 	margin-top: 200px;
 }
 
 #botbar > div {
-	height: 215px;
+	height: 180px;
 }
 
 .images h2{
