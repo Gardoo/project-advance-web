@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>GoFit Blog</title>
-	<link rel="icon" href="img/gofit_logo.png" type="image/icon type">
+	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/blog.css">
+	<link rel="stylesheet" href="_css/blog.css">
 </head>
 <body>
-	<center><a href="index.php"><img src="img/gofitblog.png" alt="HEAD"></a></center>
+	<center><a href="index.php"><img src="_img/gofitblog.png" alt="HEAD"></a></center>
 	<div class="row">
 		<div class="column">
 			<div class="card">

@@ -15,8 +15,6 @@ a:hover {
 }
 
 body {
-	margin: 0;
-	padding: 0;
 	border: 0;
 	height: 0;
 	scroll-behavior: smooth;
@@ -88,7 +86,7 @@ ul {
 	margin-top: 100px;
 	margin-left:10px ;
 	text-align: center;
-	background-color: #003366 ;
+	background-color: #003366;
 	color: white;
 
 	padding: 20px 30px;

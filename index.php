@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<title>GoFIT</title>
 	<meta name="viewport" content="width=device,initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="_css/style.css">
+	<link rel="stylesheet" type="text/css" href="_css/all.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/func.js"></script>
+	<script src="_js/func.js"></script>
 </head>
 <body>
 	<!-- VIEWPORT HOME -->
@@ -20,13 +20,13 @@
 		</div>
 
 		<!-- logo -->
-		<img src="img\gofit_banner.png" class="logo">
+		<img src="_img\gofit_banner.png" class="logo">
 
 		<!-- background content: welcome -->
 		<div class="welcome">
 			<h3>Welcome to our</h3>
 			<h1>Fitness<br>Gym Club</h1>
-			<a href="registration.php"><button type="button" class="btn">Get Membership Now</button></a>
+			<a href="register.php"><button type="button" class="btn">Get Membership Now</button></a>
 		</div>
 
 		<!-- background content: links and menu -->
@@ -39,8 +39,8 @@
 				<!-- content -->
 				<div class="overlay-content">
 					<a href="login.php">Login</a>
-					<a href="#mid">Services</a>
-					<a href="#">Blog</a>
+					<a href="#">Services</a>
+					<a href="blog.php">Blog</a>
 					<a href="#">Class</a>
 					<a href="#">Contact</a>
 					<a href="#">About</a>
@@ -49,12 +49,12 @@
 
 			<!-- side items -->
 			<div class="links">
-				<a href=""><img src="img/fb.png"></a>
-				<a href=""><img src="img/tw.png"></a>
-				<a href=""><img src="img/ig.png"></a>
-				<img src="img/share.png">
-				<img src="img/info.png">
-				<a href="admin/login.php"><img src="img/admin.png"></a>
+				<a href=""><img src="_img/fb.png"></a>
+				<a href=""><img src="_img/tw.png"></a>
+				<a href=""><img src="_img/ig.png"></a>
+				<img src="_img/share.png">
+				<img src="_img/info.png">
+				<a href="admin/login.php"><img src="_img/admin.png"></a>
 			</div>
 		</div>
 	</div>
@@ -132,9 +132,9 @@
 		</div>
 
 		<div>
-			<img class="mySlides" src="img/SL1.jpg" width="90%" height="650px">
-			<img class="mySlides" src="img/SL2.jpg" width="90%" height="650px">
-			<img class="mySlides" src="img/SL3.jpg" width="90%" height="650px">
+			<img class="mySlides" src="_img/SL1.jpg" width="90%" height="650px">
+			<img class="mySlides" src="_img/SL2.jpg" width="90%" height="650px">
+			<img class="mySlides" src="_img/SL3.jpg" width="90%" height="650px">
 		</div>
 
 		<script>
@@ -162,34 +162,6 @@
 	<button id="go-top" title="Back to Top">Top</button>
 
 	<!-- FOOTER -->
-	<div id="botbar">
-		<div class="logobot">
-			<img src="img/gofit_banner.png" >
-		</div>
-		<div>
-			<div class="div-bot">SUBSCRIPTIONS</div>
-			<ul>
-				<li class="bot"><a href="">MEMBERSHIP</a></li>
-				<li class="bot"><a href="">CLASSES</a></li>
-			</ul>
-		</div>
-		<div>
-			<div class="div-bot">COMMUNITY</div>
-			<ul>
-				<li class="bot"><a href="">SOCIAL MEDIA</a></li>
-				<li class="bot"><a href="">EVENTS</a></li>
-			</ul>
-		</div>
-		<div>
-			<div class="div-bot">ABOUT</div>
-			<ul>
-				<li class="bot"><a href="">FITNESS</a></li>
-				<li class="bot"><a href="">OUR TEAM</a></li>
-			</ul>
-		</div>
-	</div>
-	
-	<!-- FOOTER -->
-	<?php include_once("php/footer.php") ?>
+	<?php include_once("_php/footer.php") ?>
 </body>
 </html>

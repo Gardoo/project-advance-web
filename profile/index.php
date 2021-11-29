@@ -1,5 +1,5 @@
 <?php
-require('php/fetch.php');
+require('../_php/fetch.php');
 $row = getData();
 ?>
 
@@ -9,7 +9,7 @@ $row = getData();
 	<meta charset="utf-8">
 	<title>FITNESS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/profile.css">
+	<link rel="stylesheet" type="text/css" href="../_css/profile.css">
 </head>
 <body>
 	<!--HEADER (NOTIF, PROFILE)-->

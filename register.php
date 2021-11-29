@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<title>Registration Form</title>
-	<link rel="stylesheet" type="text/css" href="css/orf.css">
-	<link rel="icon" href="img/gofit_logo.png" type="image/icon type">
+	<link rel="stylesheet" type="text/css" href="_css/orf.css">
+	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
 </head>
 <body>
 <div class="position">
@@ -15,7 +15,7 @@
 			========SEPARATE ACC DETAILS AND PERSONAL INFO=========
 			=======================================================
 		-->
-		<form method="post" action="config.php" >
+		<form method="post" action="_php/config.php" >
 			<div class="title">Online Registration Form</div>
 			
 			<div class="user-info">

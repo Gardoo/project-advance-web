@@ -1,4 +1,4 @@
-<?php require_once('../php/session.php'); ?>
+<?php require_once('../_php/session.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>Admin</title>
 	<meta name="viewport" content="width=device,initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../_css/admin.css">
 	<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/09cccaa74d.js" crossorigin="anonymous"></script>
 </head>
@@ -17,12 +17,12 @@
 			<img src="https://icon-library.com/images/d8e850139c_3510.png">
 			<h1>Administrator</h1>
 			<a href="#"><i class="fas fa-columns"></i> 	Dashboard</a>
-			<a href="../blog.php"><i class="fas fa-blog"></i> 	Blog</a>
+			<a href="#"><i class="fas fa-blog"></i> 	Blog</a>
 			<a href="#"><i class="far fa-calendar"></i> 	Calendar</a>
 			<a href="index.php"><i class="fas fa-home"></i>	Homepage</a>
 			<a href="#"><i class="fas fa-archive"></i> 	Archive</a>
 			<a href="#" onclick="manage()"><i class="fas fa-gifts"></i> 	Manage Account</a>
-			<a href="../php/handler.php?a=logout"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
+			<a href="../"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
 		</div>
 
 		<!--CONTENTS TOTAL-->
@@ -46,21 +46,6 @@
 				<p>0</p>
 				<h2><a href="#">Click For more info</a></h2>
 			</div>
-				
-			<div class="announcement" >	
-				<h3><i class="fas fa-plus-circle"></i> Add Announcement </h3>
-				<h3><i class="fas fa-plus-circle"></i> Add Event </h3>
-			</div>
-
-			<div class="admin-log">
-				<h1>Admin Log</h1>
-			</div>
-
-			<div class="admin-settings">
-				<h1>Manage Settings</h1>
-				<div class="manage-content">
-				</div>
-		</div>
 		</div>
 
 		<!--CREATIONS-->
