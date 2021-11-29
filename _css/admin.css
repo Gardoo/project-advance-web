@@ -10,6 +10,13 @@ a{
 	color: white;
 }
 
+<<<<<<< Updated upstream:css/admin.css
+=======
+a:hover {
+	color: red;
+}
+
+>>>>>>> Stashed changes:_css/admin.css
 body {
 	margin: 0;
 	padding: 0;
@@ -36,6 +43,7 @@ ul {
 
 .side{
 	position: fixed;
+<<<<<<< Updated upstream:css/admin.css
 display: block;
 background-color: #003366;
 color: white;
@@ -46,6 +54,18 @@ left: 0;
 top: 0;
  line-height: 400%
 
+=======
+	display: block;
+	background-color: #003366;
+	color: white;
+	width: 20%;
+	height: 100vh;
+	text-align: left;
+	left: 0;
+	top: 0;
+ 	line-height: 200%;
+}
+>>>>>>> Stashed changes:_css/admin.css
 
 }
 .side a {
@@ -55,11 +75,19 @@ top: 0;
 	color: white;
 	
 	justify-content: right;
+<<<<<<< Updated upstream:css/admin.css
 	 line-height: 400%
  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	 border-top: 1px solid rgba(255, 255, 255, 0.1);
 	 font-weight: bold;
 	 font-family: Koh Santepheap;
+=======
+	line-height: 300%;
+ 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	font-weight: bold;
+	font-family: Koh Santepheap;
+>>>>>>> Stashed changes:_css/admin.css
 }
 
 

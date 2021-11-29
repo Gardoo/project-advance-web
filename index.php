@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>FITNESS</title>
+	<title>GoFIT</title>
 	<meta name="viewport" content="width=device,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/bars.css">
@@ -68,6 +68,24 @@
 	<!-------------------------------------LOGIN FORM---------------------->
 
 		<div class="sidebar">
+<<<<<<< Updated upstream
+=======
+			<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
+			<!-- overlay -->
+			<div id="myNav" class="overlay">
+				<!-- close button -->
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<!-- content -->
+				<div class="overlay-content">
+					<a href="login.php">Login</a>
+					<a href="#mid">Services</a>
+					<a href="#">Blog</a>
+					<a href="#">Class</a>
+					<a href="#">Contact</a>
+					<a href="#">About</a>
+				</div>
+			</div>
+>>>>>>> Stashed changes
 
 
 			<div class="social-links">
@@ -79,9 +97,13 @@
 			<div class="useful-links">
 				<img src="img/share.png">
 				<img src="img/info.png">
+<<<<<<< Updated upstream
 
 		<a href="login.php"><img src="img/admin.png"></span></a>
 
+=======
+				<a href="admin/login.php"><img src="img/admin.png"></a>
+>>>>>>> Stashed changes
 			</div>
 	<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
 
@@ -227,6 +249,7 @@ function carousel() {
 
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -303,6 +326,10 @@ function topFunction() {
 		</div>
 	</div>
 
+=======
+	<!-- FOOTER -->
+	<?php include_once("php/footer.php") ?>
+>>>>>>> Stashed changes
 </body>
 
 </html>

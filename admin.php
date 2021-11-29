@@ -1,6 +1,4 @@
-<?php
-   session_start()
-?>
+<?php require_once('../php/session.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -24,14 +22,23 @@
 			<h1>Administrator</h1>
 		
 			<a href="#"><i class="fas fa-columns"></i> 	Dashboard</a>
-			<a href="#"><i class="fas fa-blog"></i> 	Blog</a>
+			<a href="../blog.php"><i class="fas fa-blog"></i> 	Blog</a>
 			<a href="#"><i class="far fa-calendar"></i> 	Calendar</a>
 			<a href="index.php"><i class="fas fa-home"></i>	Homepage</a>
 			<a href="#"><i class="fas fa-archive"></i> 	Archive</a>
 			<a href="#" onclick="manage()"><i class="fas fa-gifts"></i> 	Manage Account</a>
+<<<<<<< Updated upstream:admin.php
 			
 			<a href="index.php"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
 		</div>
+=======
+			<a href="../php/handler.php?a=logout"><i class="fas fa-sign-out-alt"></i> 	Signout</a>
+		</div>
+
+		<!--CONTENTS TOTAL-->
+		<div class="admin-content">
+			<h1>Dashboard</h1><br>
+>>>>>>> Stashed changes:admin/index.php
 
 			<div class="admin-content">
 				<h1>Dashboard</h1>	
@@ -60,6 +67,7 @@
 
 
 			</div>
+<<<<<<< Updated upstream:admin.php
 			
 			<div class="announcement" >
 				
@@ -83,6 +91,25 @@
 			<div class="admin-settings">
 				<h1>Manage Settings</h1>
 				<div class="manage-content">
+=======
+		</div>
+
+		<!--CREATIONS-->
+		<div class="announcement" >
+			<h3><i class="fas fa-plus-circle"></i> Add Announcement </h3>
+			<h3><i class="fas fa-plus-circle"></i> Add Event </h3>
+		</div>
+
+		<!--ADMIN LOGS-->
+		<div class="admin-log">
+			<h1>Admin Log</h1>
+		</div>
+		
+		<!--ADMIN CTRL ????? ASK ?????-->
+		<div class="admin-settings">
+			<h1>Manage Settings</h1>
+			<div class="manage-content">
+>>>>>>> Stashed changes:admin/index.php
 				<div class="settings">
 					<h2>Change Password</h2>
 				</div>
