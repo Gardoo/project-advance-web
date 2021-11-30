@@ -357,3 +357,15 @@ a {
 .content a {
 	color: red;
 }
+
+/*------------ Highligts part and red underline ------------*/
+
+.mySlides {
+	display:none;
+}
+
+.unline {
+		height: 4px;
+		width: 20%;
+		background: red;
+}

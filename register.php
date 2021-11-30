@@ -29,8 +29,12 @@
 					<input type="text" placeholder="Last Name" name="lname" required>
 				</div>
 		
-				<label for="birthday">Birthday</label>
-				<input type="date" id="birthday" name="birthday" name="birthday" required="">		
+				<div class="birthday">
+						<label for="birthday">Birthday</label>
+				<div class="birthday">
+						<input type="date" id="birthday" name="birthday" name="birthday" required="">
+				</div>
+				</div>
 				
 				<div class="gender">
 					<span class="">Gender:</span>
@@ -57,6 +61,11 @@
 				<div class="t-box2">
 					<span class="details">E-mail Address:</span>
 					<input type="text" placeholder="E-mail Address" name="email" required>
+				</div>
+
+				<div class="t-box2">
+					<span class="details">Username:</span>
+					<input type="text" placeholder="Username" name="username" required>
 				</div>
 
 				<div class="t-box2">

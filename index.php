@@ -62,6 +62,10 @@
 	<!-- PROGRAMS (TITLE) -->
 	<div class="programs">	
 		<h1>Services We Offered</h1><br>
+		<center>
+		<div class="unline"></div>
+		</center>
+			<br>
 		<h5>We believe fitness should be accessible to everyone, everywhere,<br>regardless of income or access to a gym.</h5>
 	</div>
 
@@ -109,20 +113,9 @@
 			<h1>Class, Workout From Home, Clubs</h1>
 		</div>
 
-		<!-- CLASSES -->
-		<div class="classes">
-			<div class="class-info">
-				<h2>Attend Free<br>Class</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore<br> et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation <br>ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure <br>dolor in reprehenderit in <br>voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur.</p>
-			</div>
-			<img src="https://i.ytimg.com/vi/FL_fAd_K720/maxresdefault.jpg">	
-		</div>
+		<!-- HIGHLIGHTS -->
 
-		<div class="title-program">
+		<div class="programs">
 			<h1>GoFit Highlights</h1><br>
 			<center>
 				<div class="unline"></div>
@@ -150,11 +143,11 @@
 			myIndex++;
 			if (myIndex > x.length) { myIndex = 1 }    
 			x[myIndex-1].style.display = "block";  
-			setTimeout(carousel, 4000); // Change image every 2 seconds
+			setTimeout(carousel, 4000); // Change image every 4 seconds
 		}
 		</script>
 	</center>
-
+ 
 	<br>
 	<br>
 
