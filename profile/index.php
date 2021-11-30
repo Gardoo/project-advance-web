@@ -1,8 +1,3 @@
-<?php
-require('../_php/fetch.php');
-$row = getData();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +12,14 @@ $row = getData();
 		<div id="user-card">
 			<div id="photo" class="clearfix"></div>
 			<div id="top-card">
-				<h3><?= $row['fname'], $row['lname'] ?> (<?= $row['username'] ?>)</h3>
+				<h3><?= $_COOKIE['fname'] . " " . $_COOKIE['lname'] ?> (<?= $_COOKIE['username'] ?>)</h3>
 				<h4>Member</h4>
 				<p>(Until dd/MMMM/yyyy) <span id="renewbtn">Renew</span></p>
 			</div>
 			<div>
-				<h4>Address: <?= $row['address'] ?></h4>
-				<h4>E-mail: <?= $row['email'] ?></h4>
-				<h4>Contact #: <?= $row['pnum'] ?></h4>
+				<h4>Address: <?= $_COOKIE['address'] ?></h4>
+				<h4>E-mail: <?= $_COOKIE['email'] ?></h4>
+				<h4>Contact #: <?= $_COOKIE['pnum'] ?></h4>
 			</div>
 			<div id="editbtn">Edit Information</div>
 		</div>

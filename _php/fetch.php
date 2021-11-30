@@ -1,11 +1,26 @@
 <?php
-require_once('session.php');
+require_once('session.php'); // $SESSION START
+require_once('connect.php'); // DB CONNECTION
 
-function getData() {
-	$con = mysqli_connect('localhost', 'root', '','fitness_gym_club');
-	$sql = "SELECT * FROM register WHERE username = '" . $_SESSION["user"]. "'";
-	$rs = mysqli_query($con, $sql);
-	$row = mysqli_fetch_array($rs);
-	return $row;
+final class user_data {
+	function __construct(private $name, private $value) {
+		$this->$name = $name;
+		$this->$value = $value;
+		$this->create();
+	}
+
+	private function create() {
+		return setcookie($this->name, $this->value, time() + 86400, "/");
+	}
+
+	public function delete() {
+		return setcookie($this->$name, null, -1, "/");
+	}
+}
+
+$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM register WHERE username = '" . $_SESSION["user"] . "'"));
+
+foreach ($row as $key => $value) {
+	$dt = new user_data($key, $value);
 }
 ?>
