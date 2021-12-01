@@ -44,7 +44,7 @@
 					<a href="blog.php">Blog</a>
 					<a href="#">Class</a>
 					<a href="contact-us.php">Contact</a>
-					<a href="#">About</a>
+					<a href="about.php">About</a>
 				</div>
 			</div>
 

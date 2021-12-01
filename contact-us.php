@@ -20,7 +20,7 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 70%;
 }
 
 td{
@@ -47,7 +47,7 @@ th{
     <th colspan="4"><h2>Caloocan Branch</h2></th>
   </tr>
   <tr>
-    <td background-color="whitesmoke">Addess</td>
+    <td>Addess</td>
     <td>286 Kabatuhan Rd Deparo Caloocan City</td>
   </tr>
   <tr>
