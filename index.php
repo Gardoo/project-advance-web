@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>GoFIT</title>
 	<meta name="viewport" content="width=device,initial-scale=1.0">
+	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
 	<link rel="stylesheet" type="text/css" href="_css/style.css">
 	<link rel="stylesheet" type="text/css" href="_css/all.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -42,7 +43,7 @@
 					<a href="#">Services</a>
 					<a href="blog.php">Blog</a>
 					<a href="#">Class</a>
-					<a href="#">Contact</a>
+					<a href="contact-us.php">Contact</a>
 					<a href="#">About</a>
 				</div>
 			</div>
