@@ -40,7 +40,7 @@
 				<!-- content -->
 				<div class="overlay-content">
 					<a href="login.php">Login</a>
-					<a href="#">Services</a>
+					<a href="services.php">Services</a>
 					<a href="blog.php">Blog</a>
 					<a href="#">Class</a>
 					<a href="contact-us.php">Contact</a>

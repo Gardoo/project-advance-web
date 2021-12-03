@@ -9,8 +9,6 @@
 
 </head>
 
-<body>
-
 <center>	
 <h1>Contact Us</h1>
 
@@ -39,7 +37,7 @@ th{
 }
 
 </style>
-</head>
+
 <body>
 
 <table>

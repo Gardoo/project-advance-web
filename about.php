@@ -18,7 +18,7 @@ html {
 
 .column {
   float: left;
-  width: 33.3%;
+  width: 20%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
@@ -81,17 +81,16 @@ html {
   <p>Resize the browser window to see that this page is responsive by the way.</p>
 </div>
 
-<h2 style="text-align:center">Our Team</h2>
+<h2 style="text-align:center">Our Developer</h2>
 <div class="row">
   <div class="column">
     <div class="card">
       <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
       <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
+        <h3>Caballero Edgardo</h3>
+        <p class="title">Leader</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>jane@example.com</p>
-        <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
@@ -100,11 +99,10 @@ html {
     <div class="card">
       <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
       <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
+        <h3>Ocampo Jerud</h3>
+        <p class="title">Member</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
@@ -113,15 +111,39 @@ html {
     <div class="card">
       <img src="/w3images/team3.jpg" alt="John" style="width:100%">
       <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
+        <h3>Flores Jake</h3>
+        <p class="title">Member</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h3>Espere Edward</h3>
+        <p class="title">Member</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h3>Tanso Jeremy</h3>
+        <p class="title">Member</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-----row end div------>
 
 </body>
 </html>
