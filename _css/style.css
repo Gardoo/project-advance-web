@@ -16,6 +16,13 @@ html {
 
 a {
 	text-decoration: none;
+	color: black;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
 /*============ LANDING PAGE ============*/
@@ -341,7 +348,7 @@ a {
 	display: block;
 	width: 70%;
 	margin: 20px auto;
-	padding: 8px ;
+	padding: 8px;
 	border: 1px solid gray;
 }
 
@@ -358,6 +365,133 @@ a {
 	color: red;
 }
 
+/*============ REGISTRATION FORM ============*/
+
+/*------------ Body ------------*/
+#reg-body {
+	position: relative;
+	height: calc(100vh - 20px);
+	padding: 10px;
+	color: black;
+	background-image: url("../_img/orf_bg_W.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*------------ Form ------------*/
+.formbox {
+	position: absolute;
+	max-width: 650px;
+	left: 560px;
+	padding: 10px 40px;
+	background: ghostwhite;
+	border: 1px solid;
+	border-radius: 25px;
+}
+
+/*------------ elements ------------*/
+.title::before {
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	content: ' ';
+	left: 0;
+	bottom: 0;
+	background: lightgray;
+}
+
+.title {
+	position: relative;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+}
+
+.user-info {
+	margin: 20px 0 12px 0;
+	/*top: 10; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.t-box1 {
+	margin-bottom: 10px;
+	width: 47%;
+}
+
+.t-box2 {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+[class^="t-box"] > input {
+	height: 30px;
+	width: 100%;
+	padding-left: 15px;
+	outline: none;
+	font-size: 16px;
+	border-bottom-width: 3px;
+	border: 3px solid #ccc;
+	border-radius: 10px;
+	background: whitesmoke;
+	transition: all 0.3s ease;
+}
+
+[class^="t-box"] > input:focus, 
+[class^="t-box"] > input:valid {
+	border-color: #48dbfb;
+}
+
+[class^="t-box"] > .details {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.birthday > .birthday, 
+.gender > .category { /*??? & fix nested*/
+	height: 30px;
+	width: 100%;
+	margin: 8px 1px;
+	display: flex;
+	justify-content: space-between;
+}
+
+button[class*="btn"] {
+	width: 100%;
+	padding: 14px 20px;
+	margin: 5px 0;
+	color: white;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+button[class*="btn"]:hover {
+	opacity: 0.7;
+}
+
+.cancelbtn {
+	float: left;
+	width: 49%;
+	padding: 14px 20px;
+	background-color: #ff3333;
+}
+
+.signupbtn {
+	float: right;
+	width: 49%;
+	background-color: #1aff1a;
+}
+
+/*?????????????????????????*/
 /*------------ Highligts part and red underline ------------*/
 
 .mySlides {

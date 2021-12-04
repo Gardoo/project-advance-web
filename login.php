@@ -1,6 +1,6 @@
 <?php 
 require_once('_php/session.php'); // $SESSION START
-require_once('_php/connect.php'); // DB CONNECTION
+$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
 
 $username = $password = "";
 
@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$username = test_input($_POST['username']);
 	$password = test_input($_POST['password']);
 
-	$is_enter = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM register WHERE username = '$username' AND pword = '$password'"));
+	$is_enter = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM acc_login WHERE username = '$username' AND password = '$password'"));
 
 	if($is_enter) {
 		$_SESSION["user"] =  $username;
