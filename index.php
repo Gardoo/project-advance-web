@@ -152,6 +152,8 @@
 	<br>
 	<br>
 
+	<a href="Sample.php"><button >sample</button></a><!---Sample Page dont Delete button--->
+
 	<!-- GO TOP -->
 	<button id="go-top" title="Back to Top">Top</button>
 
