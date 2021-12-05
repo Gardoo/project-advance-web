@@ -1,309 +1,96 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Payment List</title>
 
-<meta name="viewport" id="viewport" content="target-densitydpi=high-dpi,initial-scale=1.0,user-scalable=no" />
-
-<title>Document Title</title>
-
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-
- 
-
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-
-<script type="text/javascript">
-
-var slideIndex = 1;
-
-var t;
-
-var dots;
-
-var maxheight = 0;
-
-var timedelay = 5000;
-
-window.onload = function() {
-
-var x = document.getElementsByClassName("mySlides");
-
-var parent_elem = document.getElementById('myslideFrame')
-
- 
-
-var widthRatio = parseInt(parent_elem.offsetWidth) / parseInt(x[0].width)
-
-for (i = 0; i < x.length; i++) {
-
-// x.style.width = "100%";
-
- 
-
-if (x.height > maxheight)
-
-{
-
- 
-
-maxheight = x.height;
-
- 
-
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  table-layout: fixed;
 }
 
- 
-
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
 }
 
- 
-
-document.getElementById('myslideFrame').style.height = maxheight * widthRatio + "px";
-
- 
-
-showDivs(slideIndex);
-
-carousel();
-
-};
-
- 
-
-function plusDivs(n) {
-
-showDivs(slideIndex += n);
-
- 
-
+table tr button { 
+  opacity:0;
+  float: left;
 }
 
- 
-
-function currentDiv(n) {
-
-showDivs(slideIndex = n);
-
+table tr:hover button {
+  opacity:1 
 }
 
- 
-
-function showDivs(n) {
-
-var i;
-
-var x = document.getElementsByClassName("mySlides");
-
-dots = document.getElementsByClassName("demo");
-
-if (n > x.length) {
-
-slideIndex = 1;
-
+button{
+  background-color: #ffff33;
+  color: black;
+  border-radius: 8px;
+  font-size: 12px;
+  border: 1px solid black;
+  padding: 10px 24px;
+  cursor: pointer;
 }
-
-if (n < 1) {
-
-slideIndex = x.length;
-
+.subbtn{
+  background-color: green;
 }
-
-;
-
- 
-
-for (i = 0; i < x.length; i++) {
-
-x.style.display = "none";
-
-}
-
-for (i = 0; i < dots.length; i++) {
-
-dots.className = dots.className.replace(" w3-border-red", "");
-
-}
-
-x[slideIndex - 1].style.display = "inline-block";
-
-dots[slideIndex - 1].className += " w3-border-red";
-
-}
-
- 
-
- 
-
- 
-
-function carousel() {
-
-var i;
-
- 
-
-var x = document.getElementsByClassName("mySlides");
-
-for (i = 0; i < x.length; i++) {
-
-x.style.display = "none";
-
-dots.className = dots.className.replace(" w3-border-red", "");
-
-}
-
-slideIndex++;
-
-if (slideIndex > x.length) {
-
-slideIndex = 1
-
-}
-
-x[slideIndex - 1].style.display = "inline-block";
-
-dots[slideIndex - 1].className += " w3-border-red";
-
-t = setTimeout(carousel, timedelay);
-
-}
-
- 
-
-function pauseCarousel() {
-
- 
-
-clearTimeout(t)
-
-}
-
- 
-
-function startCarousel() {
-
- 
-
-t = setTimeout(carousel, timedelay);
-
-}
-
- 
-
-</script>
-
-<style type="text/css">
-
-.w3-content {max-width:500px; margin: 10px auto; }
-
-.mySlides {width: 100%;} /**/
-
-.mySlides {display: none; vertical-align: middle; }
-
-#myslideFrame{text-align: center; font-size:0;min-height:100%; font-size:0; text-align: center;position:relative;}
-
-#myslideFrame:before, .flexbox > div:before {content: ""; height: 100%; vertical-align: middle; width: 0; background: red; display: inline-block;}
-
- 
-
-.flexbox {
-
-display: flex;
-
-flex-wrap: wrap;
-
-margin: 2% 0 !important;
-
-}
-
-.flexbox > div{
-
-flex: 1;
-
-vertical-align: middle;
-
-font-size:0;
-
-}
-
- 
-
-.flexbox > div img {vertical-align: middle;}
-
- 
-
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-
-.w3-badge {height:13px;width:13px;padding:0}
-
- 
 
 </style>
-
 </head>
-
 <body>
+<center>
 
-<div class="w3-content">
+<h2>Manage Accounts</h2>
 
-<div id="myslideFrame">
 
-<img class="mySlides" src="http://www.w3schools.com/w3css/img_nature_wide.jpg" >
+<table>
+  <tr>
+    <th colspan="3" style="border:none;">Goal:<textarea>input text</textarea><br>Enter Date:<textarea>input text</textarea><br><button class="subbtn">Submit</button></th>
+  </tr>
+  <tr>
+    <th style="width:50px">Day</th>
+    <th style="width:200px">Goal</th>
+    <th style="width:50px; border: none;"></th>
+  </tr>
 
-<img class="mySlides" src="http://www.w3schools.com/w3css/img_fjords_wide.jpg" >
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="border: none;"><button>Edit Goal</button></td>
+  </tr>
 
-<img class="mySlides" src="http://www.w3schools.com/w3css/img_mountains_wide.jpg" >
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="border: none;"><button>Edit Goal</button></td>
+  </tr>
 
-<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)" onmouseover="pauseCarousel();" onmouseout="startCarousel()">❮</a>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="border: none;"><button>Edit Goal</button></td>
+  </tr>
 
-<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)" onmouseover="pauseCarousel();" onmouseout="startCarousel()">❯</a>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="border: none;"><button>Edit Goal</button></td>
+  </tr>
 
-<div style="width:100%" class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft">
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="border: none;"><button>Edit Goal</button></td>
+  </tr>
+</table>
 
-<span onclick="currentDiv(1)" class="w3-badge demo w3-border w3-transparent w3-hover-white" onmouseover="pauseCarousel();" onmouseout="startCarousel()"></span>
-
-<span onclick="currentDiv(2)" class="w3-badge demo w3-border w3-transparent w3-hover-white" onmouseover="pauseCarousel();" onmouseout="startCarousel()"></span>
-
-<span onclick="currentDiv(3)" class="w3-badge demo w3-border w3-transparent w3-hover-white" onmouseover="pauseCarousel();" onmouseout="startCarousel()"></span>
-
-</div>
-
-</div>
-
-<div class="w3-row-padding w3-section flexbox">
-
-<div class="w3-col s4">
-
-<img class="demo w3-border w3-hover-shadow" src="http://www.w3schools.com/w3css/img_nature_wide.jpg" style="width:100%" onclick="currentDiv(1)" onmouseover="pauseCarousel();" onmouseout="startCarousel()">
-
-</div>
-
-<div class="w3-col s4">
-
-<img class="demo w3-border w3-hover-shadow" src="http://www.w3schools.com/w3css/img_fjords_wide.jpg" style="width:100%" onclick="currentDiv(2)" onmouseover="pauseCarousel();" onmouseout="startCarousel()">
-
-</div>
-
-<div class="w3-col s4">
-
-<img class="demo w3-border w3-hover-shadow" src="http://www.w3schools.com/w3css/img_mountains_wide.jpg" style="width:100%" onclick="currentDiv(3)" onmouseover="pauseCarousel();" onmouseout="startCarousel()">
-
-</div>
-
-</div>
-
- 
-
-</div>
-
- 
-
+</center>
 </body>
-
 </html>
+

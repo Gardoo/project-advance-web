@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<title>manage_acc</title>
+
 <style>
 table {
   font-family: arial, sans-serif;
