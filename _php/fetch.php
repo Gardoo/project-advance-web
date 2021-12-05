@@ -1,6 +1,6 @@
 <?php
 require_once('session.php'); // $SESSION START
-require_once('connect.php'); // DB CONNECTION
+$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
 
 final class user_data {
 	function __construct(private $name, private $value) {
@@ -18,7 +18,7 @@ final class user_data {
 	}
 }
 
-$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM register WHERE username = '" . $_SESSION["user"] . "'"));
+$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT fname,lname,status,dob,sex,address,pnum,email,username FROM accounts JOIN acc_profile ON accounts.user_id = acc_profile.user_id JOIN acc_login ON acc_profile.user_id = acc_login.user_id WHERE username = '" . $_SESSION["user"] . "'")); // fix to make ALL EXCEPT
 
 foreach ($row as $key => $value) {
 	$dt = new user_data($key, $value);

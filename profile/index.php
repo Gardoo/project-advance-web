@@ -13,7 +13,7 @@
 			<div id="photo" class="clearfix"></div>
 			<div id="top-card">
 				<h3><?= $_COOKIE['fname'] . " " . $_COOKIE['lname'] ?> (<?= $_COOKIE['username'] ?>)</h3>
-				<h4>Member</h4>
+				<h4><?= ucfirst($_COOKIE['status']) ?></h4>
 				<p>(Until dd/MMMM/yyyy) <span id="renewbtn">Renew</span></p>
 			</div>
 			<div>
