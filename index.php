@@ -1,3 +1,5 @@
+<?php require_once '_php/session.php'; // $SESSION START ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,23 +29,27 @@
 		<div class="welcome">
 			<h3>Welcome to our</h3>
 			<h1>Fitness<br>Gym Club</h1>
-			<a href="register.php"><button type="button" class="btn">Get Membership Now</button></a>
+			<a href="register.php"><button type="button">Get Membership Now</button></a>
 		</div>
 
 		<!-- background content: links and menu -->
 		<div class="sidebar">
-			<span onclick="openNav()"><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
+			<span><img src="https://cdn-icons-png.flaticon.com/512/189/189790.png" class="menu"></span>
 			<!-- overlay -->
 			<div id="myNav" class="overlay">
 				<!-- close button -->
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="javascript:void(0)" class="closebtn">&times;</a>
 				<!-- content -->
 				<div class="overlay-content">
-					<a href="login.php">Login</a>
-					<a href="services.php">Services</a>
+					<?php if(empty($_SESSION["user"])): ?>
+						<a href="login.php">Login</a>
+					<?php else: ?>
+						<a href="profile/">Profile</a>
+					<?php endif ?>
+					<a href="#programs">Services</a>
 					<a href="blog.php">Blog</a>
 					<a href="#">Class</a>
-					<a href="contact-us.php">Contact</a>
+					<a href="#contacts">Contact</a>
 					<a href="about.php">About</a>
 				</div>
 			</div>
@@ -55,19 +61,20 @@
 				<a href=""><img src="_img/ig.png"></a>
 				<img src="_img/share.png">
 				<img src="_img/info.png">
-				<a href="admin/login.php"><img src="_img/admin.png"></a>
+				<?php if((!empty($_SESSION["level"]) && $_SESSION["level"] == 1) || empty($_SESSION["level"])): ?>
+					<a href="admin/login.php"><img src="_img/admin.png"></a>
+				<?php endif ?>
 			</div>
 		</div>
 	</div>
 
 	<!-- PROGRAMS (TITLE) -->
-	<div class="programs">	
-		<h1>Services We Offered</h1><br>
+	<div id="programs">	
 		<center>
-		<div class="unline"></div>
+			<h1>Services We Offered</h1><br>
+			<div class="unline"></div><br>
+			<h5>We believe fitness should be accessible to everyone, everywhere,<br>regardless of income or access to a gym.</h5>
 		</center>
-			<br>
-		<h5>We believe fitness should be accessible to everyone, everywhere,<br>regardless of income or access to a gym.</h5>
 	</div>
 
 	<!-- PROGRAMS (OFFERS) -->
@@ -115,14 +122,12 @@
 		</div>
 
 		<!-- HIGHLIGHTS -->
-
-		<div class="programs">
-			<h1>GoFit Highlights</h1><br>
+		<div id="programs">
 			<center>
-				<div class="unline"></div>
-			</center>
-			<br>
+				<h1>GoFit Highlights</h1><br>
+				<div class="unline"></div><br>
 			<h5>Find what you need in your fitness journey.</h5>
+			</center>
 		</div>
 
 		<div>

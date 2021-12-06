@@ -1,3 +1,7 @@
+/*====================================================================================*/
+/*= important > inline > id nesting > id > class nesting > class > tag nesting > tag =*/
+/*====================================================================================*/
+
 /*============ GENERAL STYLES ============*/
 :root {
 
@@ -17,6 +21,17 @@ html {
 a {
 	text-decoration: none;
 	color: black;
+}
+
+/*a:hover {
+	color: red;
+} SEEN IN ADMIN*/
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
 }
 
 .clearfix::after {
@@ -79,14 +94,14 @@ a {
 	justify-content: center;
 }
 
-.welcome > h1{
+.welcome > h1 {
 	font-size: 80px;
 	margin: 10px 0 30px;
 	font-family: CfSpaceshipRegular-2d4e;
 	text-shadow: 3px 3px gray;
 }
 
-.btn {
+.welcome > a > button {
 	color: #fbfcfd;
 	padding: 10px 25px;
 	background: transparent;
@@ -169,7 +184,7 @@ a {
 }
 
 /*------------ Programs Offered ------------*/
-.programs {
+#programs, #highlights {
 	padding: 30px 0 20px;
 	margin: 100px 0 50px;
 	text-align: center;
@@ -314,10 +329,102 @@ a {
 	background-color: #555;
 }
 
+/*------------ Carousel ------------*/
+.mySlides {
+	display:none;
+}
+
+.unline {
+	height: 4px;
+	width: 20%;
+	background: red;
+}
+
+/*------------ Footer ------------*/
+
+#botbar {
+	padding: 12px;
+	margin-top: 200px;
+
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+#botbar > .logo {
+	height: 100px;
+	width: 200px;
+	cursor: pointer;
+	align-self: center;
+}
+
+#botbar > .logo > div {
+	height: inherit;
+	width: inherit;
+	background-image: url(../_img/gofit_banner.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#botbar, #copy {
+	background-color: #262626;
+}
+
+#botbar, #botbar a, #copy {
+	color: white;
+}
+
+#botbar > ul li {
+	height: 2.5rem;
+	width: 300px;
+	margin: 6px 0 12px 0;
+}
+
+#botbar > ul li a {
+	display: table-cell;
+	height: inherit;
+	width: inherit;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#botbar > ul li:hover, #botbar > ul li:hover a {
+	font-weight: bold;
+	background-color: white;
+	color: #262626;
+}
+
+#contacts {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+#contacts > *:not(:first-child) {
+	padding: 6px 0 6px 0;
+
+}
+
+#contacts > *:not(:last-child) {
+	border-bottom: 2px solid white;
+}
+
+#contacts > ul > li {
+	margin: 3px 0 6px 0;
+}
+
+#contacts > ul > li:first-child {
+	font-weight: bold;
+}
+
+#copy {
+	text-align: right;
+}
+
 /*============ USER LOGIN ============*/
 
 /*------------ Container ------------*/
-.container {
+.u-container {
 	/*home - landing page*/
 	position: unset;
 	background: rgba(0, 0, 0, 0.6);
@@ -329,7 +436,7 @@ a {
 }
 
 /*------------ Content ------------*/
-.content {
+.u-container > .content {
 	position: relative;
 	height: 280px;
 	width: 400px;
@@ -339,12 +446,12 @@ a {
 	border-radius: 25px;
 }
 
-.content > img {
+.u-container > .content > img {
 	height: 50px;
 	width: 50px;
 }
 
-.content > input {
+.u-container > .content > input {
 	display: block;
 	width: 70%;
 	margin: 20px auto;
@@ -352,7 +459,7 @@ a {
 	border: 1px solid gray;
 }
 
-.content > button {
+.u-container > .content > button {
 	margin-bottom: 10px;
 	padding: 10px 55px;
 	background: transparent;
@@ -361,7 +468,7 @@ a {
 	cursor: pointer;
 }
 
-.content a {
+.u-container > .content a {
 	color: red;
 }
 
@@ -491,15 +598,114 @@ button[class*="btn"]:hover {
 	background-color: #1aff1a;
 }
 
-/*?????????????????????????*/
-/*------------ Highligts part and red underline ------------*/
+/*============ ADMIN: LANDING PAGE ============*/
 
-.mySlides {
-	display:none;
+/*------------ Sidebar ------------*/
+.side {
+	position: fixed;
+	display: block;
+	height: 100vh;
+	width: 20%;
+	top: 0;
+	left: 0;
+	background-color: #003366;
+	color: white;
+	text-align: left;
+	line-height: 200%;
 }
 
-.unline {
-		height: 4px;
-		width: 20%;
-		background: red;
+.side > h1 {
+	align-items: center;
+	background-size: cover;
+	text-align: center;
+	font-size: 25px;
+}
+
+.side > a {
+	display: block;
+	line-height: 300%;
+	margin-top: 10px;
+	justify-content: right;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+	font-family: Koh Santepheap;
+	text-decoration: none;
+	color: white;
+}
+
+.side > img {
+	height:200px;
+	width: 200px;
+	margin-left: 30px;
+}
+
+/*------------ Admin Container ------------*/
+.admin > .container {
+	width: 80%;
+	margin-left: 20%;
+}
+
+/*============ ADMIN: LANDING PAGE ============*/
+
+/*------------ Dashboard ------------*/
+.admin-content {
+	display: flex;
+}
+
+.admin-content > h1 {
+	margin: 20px 0 100px 20px;
+	text-align: center;
+	align-items: center;
+}
+
+.admin-content > .content {
+	margin-top: 100px;
+	margin-left: 10px ;
+	text-align: center;
+	background-color: #003366;
+	color: white;
+
+	padding: 20px 30px;
+	height: 20vh;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.admin-content > .content > p {
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+.admin-content > .content > h2 {
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+/*------------ Admin Logs ------------*/
+.admin-log {
+	height: 100vh;
+	width: 75vw;
+	margin-top: 50px;
+	margin-left: 2%;
+	align-items: center;
+	background-color: #003366 ;
+	color: white;
+	text-align: center;
+	border-radius: 30px;
+}
+
+.admin-log > h1 {
+	margin-bottom: 100px;
+	border-bottom: solid 1px black;
+}
+
+/*------------ Create Announcements ------------*/
+.announcement {
+	line-height: 300%;
+	margin-top: 20px;
+	margin-left: 2%;
+	text-align: left;
+	justify-content: left;
+	cursor: pointer;
 }

@@ -33,7 +33,7 @@ function test_input($data) {
 	<link rel="stylesheet" type="text/css" href="_css/style.css">
 </head>
 <body>
-	<form class="home container" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+	<form class="home u-container" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<div class="content">
 			<img src="_img/admin.png">
 			<h4>Member Login</h4>

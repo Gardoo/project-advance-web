@@ -17,9 +17,9 @@
 				<p>(Until dd/MMMM/yyyy) <span id="renewbtn">Renew</span></p>
 			</div>
 			<div>
-				<h4>Address: <?= $_COOKIE['address'] ?></h4>
-				<h4>E-mail: <?= $_COOKIE['email'] ?></h4>
-				<h4>Contact #: <?= $_COOKIE['pnum'] ?></h4>
+				<div><b>Address: </b><?= $_COOKIE['address'] ?></div>
+				<div><b>E-mail: </b><?= $_COOKIE['email'] ?></div>
+				<div><b>Contact #: </b><?= $_COOKIE['pnum'] ?></div>
 			</div>
 			<div id="editbtn">Edit Information</div>
 		</div>
