@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.5-10.4.21-MariaDB : Database - gofit_db
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -26,7 +27,7 @@ CREATE TABLE `acc_login` (
   `level` smallint(3) NOT NULL DEFAULT 3,
   `user_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`user_id`),
-  CONSTRAINT `acc_login_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
+  CONSTRAINT `acc_login_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `acc_login` */

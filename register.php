@@ -15,10 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = test_input($_POST['password']);
 	$cpassword = test_input($_POST['confirm_password']);
 
-	$rs = mysqli_multi_query($conn, 
-		"INSERT INTO accounts(fname,lname,date_joined) VALUES('$fname','$lname', '" . date("Y-m-d H:i:s") . "');" . 
-		"INSERT INTO acc_login(username,password,level,user_id) SELECT '$username', '$cpassword', 3, accounts.user_id FROM accounts;" .
-		"INSERT INTO acc_profile(dob,sex,address,pnum,email,user_id) SELECT '". date("Y-m-d H:i:s", strtotime($dob)) . "', '$sex', '$address', '$pnum', '$email', accounts.user_id FROM accounts");
+	$joindate = date("Y-m-d H:i:s");
+	
+	$q = "INSERT INTO accounts(fname,lname,date_joined) VALUES('$fname','$lname', '$joindate');";
+	$q .= "INSERT INTO acc_login(username,password,level,user_id) SELECT '$username', '$cpassword', 3, accounts.user_id FROM accounts WHERE accounts.date_joined='$joindate';";
+	$q .= "INSERT INTO acc_profile(dob,sex,address,pnum,email,user_id) SELECT '". date("Y-m-d H:i:s", strtotime($dob)) . "', '$sex', '$address', '$pnum', '$email', accounts.user_id FROM accounts WHERE accounts.date_joined='$joindate'";
+
+	$rs = mysqli_multi_query($conn, $q);
 
 	if ($rs) {
 		echo '<script type="text/javascript">alert("Registered Sucessfully.");window.location.href = "index.php";</script>';
