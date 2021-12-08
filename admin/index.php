@@ -1,10 +1,37 @@
-<?php require_once '../_php/session.php'; ?>
+<?php
+require_once '../_php/session.php';
+
+if(!empty($_SESSION["user"]) && $_SESSION["level"] != 1) {
+	echo '<script type="text/javascript">alert("Unathorized access."); window.location.href = "../";</script>';
+} elseif (empty($_SESSION["user"])) {
+	echo '<script type="text/javascript">window.location.href = "login.php";</script>';
+}
+
+$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+
+// GET TOTAL: MEMBERS
+$q = "SELECT COUNT(*) FROM acc_login JOIN accounts ON acc_login.user_id = accounts.user_id WHERE level=3 AND status='active';";
+$q .= "SELECT COUNT(*) FROM clubs WHERE status='active';";
+$q .= "SELECT COUNT(*) FROM branches WHERE status='active';";
+
+if (mysqli_multi_query($conn, $q)) {
+	do {
+		$result = mysqli_store_result($conn); // store current result
+		if ($result) {
+			$row[] = mysqli_fetch_row($result);
+		} else if ($result === FALSE) {
+			echo mysqli_error($conn); // use error string
+			break;
+		}
+	} while (mysqli_next_result($conn)); // current = next result
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Admin</title>
+	<title>Admin | GoFIT</title>
 	<meta name="viewport" content="width=device,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../_css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100&display=swap" rel="stylesheet">
@@ -13,7 +40,7 @@
 <body>
 	<div class="admin">
 		<!--SIDE NAVBAR-->
-		<?php require '../_php/sidebar.php'; ?>
+		<?php require '../_php/sidebar.php' ?>
 
 		<div class="container">
 			<!--CONTENTS TOTAL-->
@@ -22,27 +49,26 @@
 
 				<div class="content">
 					<h3>Total Members</h3>
-					<p>0</p>
+					<p><?php foreach($row[0] as $key => $value) print_r($value) ?></p>
 					<h2><a href="#">Click For more info</a></h2>
 				</div>
 
 				<div class="content">
-					<h3>Class Attendance</h3>
-					<p>0</p>
+					<h3>Registered Clubs</h3>
+					<p><?php foreach($row[1] as $key => $value) print_r($value) ?></p>
 					<h2><a href="#">Click For more info</a></h2>
 				</div>
 
 				<div class="content">
-					<h3>Club Members</h3>
-					<p>0</p>
+					<h3>Total Branches</h3>
+					<p><?php foreach($row[2] as $key => $value) print_r($value) ?></p>
 					<h2><a href="#">Click For more info</a></h2>
 				</div>
 			</div>
 
 			<!--CREATIONS-->
 			<div class="announcement">
-				<h3><a href=""><i class="fas fa-plus-circle"></i> Add Announcement </a></h3>
-				<h3><a href=""><i class="fas fa-plus-circle"></i> Add Event </a></h3>
+				<h3><a href="manage/announcements.php"><i class="fas fa-plus-circle"></i> Add Announcement</a></h3>
 			</div>
 
 			<!--ADMIN LOGS-->

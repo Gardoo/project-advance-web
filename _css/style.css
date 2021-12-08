@@ -603,45 +603,60 @@ button[class*="btn"]:hover {
 /*------------ Sidebar ------------*/
 .side {
 	position: fixed;
-	display: block;
 	height: 100vh;
 	width: 20%;
 	top: 0;
 	left: 0;
 	background-color: #003366;
 	color: white;
-	text-align: left;
-	line-height: 200%;
+	text-align: center;
+	
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.side > img {
+	height: 200px;
+	width: 200px;
+	align-self: center;
 }
 
 .side > h1 {
-	align-items: center;
+	align-self: center;
 	background-size: cover;
-	text-align: center;
 	font-size: 25px;
 }
 
-.side > a {
-	display: block;
-	line-height: 300%;
-	margin-top: 10px;
-	justify-content: right;
+.side > div {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 5px 0 10px;
+}
+
+.side a {
+	padding: 1rem 1rem 1rem 0.5rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	font-weight: bold;
 	font-family: Koh Santepheap;
-	text-decoration: none;
 	color: white;
+	text-align: left;
 }
 
-.side > img {
-	height:200px;
-	width: 200px;
-	margin-left: 30px;
+.side a:hover {
+	background-color: white;
+	color: #003366;
+}
+
+.side a i {
+	height: 20px;
+	width: 20px;
+	text-align: center;
 }
 
 /*------------ Admin Container ------------*/
 .admin > .container {
+	position: relative;
 	width: 80%;
 	margin-left: 20%;
 }
@@ -708,4 +723,81 @@ button[class*="btn"]:hover {
 	text-align: left;
 	justify-content: left;
 	cursor: pointer;
+}
+
+/*============ ADMIN: MANAGE ACCOUNTS ============*/
+.container > h2 {
+	margin: 20px;
+}
+
+#accounts {
+	display: table;
+	height: auto;
+	width: auto;
+	table-layout: fixed;
+	border-collapse: collapse;
+	font-family: arial, sans-serif;
+}
+
+#accounts th, #accounts td {
+	padding: 8px;
+	border: 1px solid #003366;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#accounts th {
+	background-color: #003366;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+#accounts th > span {
+	content: " ";
+	position: relative;
+ 	top: 12px;
+	left: 5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white transparent transparent transparent;
+}
+
+#accounts tr:nth-child(even) {
+	background-color: lightgray;
+}
+
+#accounts tr:hover {
+
+}
+
+#accounts td:last-child {
+	white-space: unset;
+}
+
+#accounts td:last-child {
+	position: relative;
+}
+
+#accounts td > button {
+	width: 100%;
+	padding: 10px 24px;
+	margin: 1px;
+	background-color: #ffff33;
+	color: black;
+	border: 1px solid black;
+	border-radius: 8px;
+	font-size: 12px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.data {
+	width: calc(100% - 20px);
+	margin: 10px;
+	overflow-x: auto;
+}
+
+.dabtn {
+	background-color: #ff6666;
 }

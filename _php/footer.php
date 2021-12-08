@@ -8,7 +8,7 @@
 	<?php if(!empty($_SESSION["user"])): ?>
 		<ul>
 			<li><a href="profile/">Profile</a></li>
-			<li><a href="_php/logout.php">Log-out</a></li>
+			<li><a href="http://localhost/project-advance-web/_php/logout.php">Log-out</a></li>
 		</ul>
 	<?php endif ?>
 	<ul>

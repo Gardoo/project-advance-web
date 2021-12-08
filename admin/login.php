@@ -2,6 +2,12 @@
 require_once('../_php/session.php'); // $SESSION START
 require_once('../_php/connect.php'); // DB CONNECTION
 
+if(!empty($_SESSION["user"]) && $_SESSION["level"] == 1) {
+	echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+} elseif (!empty($_SESSION["user"])) {
+	echo '<script type="text/javascript">window.location.href = "../profile/";</script>';
+}
+
 $username = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,7 +38,7 @@ function test_input($data) {
 	<link rel="stylesheet" type="text/css" href="../_css/style.css">
 </head>
 <body>
-	<form class="home container" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+	<form class="home u-container" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<div class="content">
 			<img src="../_img/admin.png">
 			<h4>Admin Login</h4>

@@ -1,3 +1,11 @@
+<?php 
+require_once('../_php/session.php'); // $SESSION START
+
+if(empty($_SESSION["user"])) {
+	echo '<script type="text/javascript">window.location.href = "../login.php";</script>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +22,14 @@
 		<div id="user-card">
 			<div id="photo" class="clearfix"></div>
 			<div id="top-card">
-				<h3><?= $_COOKIE['fname'] . " " . $_COOKIE['lname'] ?> (<?= $_COOKIE['username'] ?>)</h3>
-				<h4><?= ucfirst($_COOKIE['status']) ?></h4>
+				<h3><?= $_SESSION['fname'] . " " . $_SESSION['lname'] ?> (<?= $_SESSION['username'] ?>)</h3>
+				<h4><?= ucfirst($_SESSION['status']) ?></h4>
 				<p>(Until dd/MMMM/yyyy) <button id="renewbtn">Renew</button></p>
 			</div>
 			<div>
-				<div><b>Address: </b><?= $_COOKIE['address'] ?></div>
-				<div><b>E-mail: </b><?= $_COOKIE['email'] ?></div>
-				<div><b>Contact #: </b><?= $_COOKIE['pnum'] ?></div>
+				<div><b>Address: </b><?= $_SESSION['address'] ?></div>
+				<div><b>E-mail: </b><?= $_SESSION['email'] ?></div>
+				<div><b>Contact #: </b><?= $_SESSION['pnum'] ?></div>
 			</div>
 			<div><button id="editbtn">Edit Information</button></div>
 		</div>

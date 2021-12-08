@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 	//============ TO TOP ============
-
 	var gotop = $("#go-top");
 
 	//------------ show ------------
@@ -18,7 +17,6 @@ $(document).ready(function() {
 	});
 
 	//============ MENU TOGGLE ============
-
 	$(".menu, .closebtn").on("click", function() {
 		var wid = ($("#myNav").css("width") == "0px") ? "100%" : "0%";
 		$("#myNav").css("width", wid);
@@ -26,7 +24,7 @@ $(document).ready(function() {
 	});
 
 	var detach = 0;
-	$(".overlay-content a").on("click", function(e) {
+	$(".overlay-content a[href^='#']").on("click", function(e) {
 		if(detach) {
 			detach = 0;
 			$("html, body").animate({ scrollTop: $($.attr(e.currentTarget, 'href')).offset().top }, 500);

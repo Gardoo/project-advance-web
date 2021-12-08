@@ -122,7 +122,7 @@
 		</div>
 
 		<!-- HIGHLIGHTS -->
-		<div id="programs">
+		<div id="highlights">
 			<center>
 				<h1>GoFit Highlights</h1><br>
 				<div class="unline"></div><br>

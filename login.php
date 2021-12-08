@@ -1,5 +1,10 @@
 <?php 
 require_once('_php/session.php'); // $SESSION START
+
+if(!empty($_SESSION["user"])) {
+	echo '<script type="text/javascript">window.location.href = "profile/";</script>';
+}
+
 $conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
 
 $username = $password = "";
