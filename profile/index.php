@@ -5,6 +5,8 @@
 	<title>FITNESS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../_css/profile.css">
+	<link rel="icon" href="../_img/gofit_logo.png" type="image/icon type">
+
 </head>
 <body>
 	<!--HEADER (NOTIF, PROFILE)-->
@@ -14,140 +16,191 @@
 			<div id="top-card">
 				<h3><?= $_COOKIE['fname'] . " " . $_COOKIE['lname'] ?> (<?= $_COOKIE['username'] ?>)</h3>
 				<h4><?= ucfirst($_COOKIE['status']) ?></h4>
-				<p>(Until dd/MMMM/yyyy) <span id="renewbtn">Renew</span></p>
+				<p>(Until dd/MMMM/yyyy) <button id="renewbtn">Renew</button></p>
 			</div>
 			<div>
 				<div><b>Address: </b><?= $_COOKIE['address'] ?></div>
 				<div><b>E-mail: </b><?= $_COOKIE['email'] ?></div>
 				<div><b>Contact #: </b><?= $_COOKIE['pnum'] ?></div>
 			</div>
-			<div id="editbtn">Edit Information</div>
+			<div><button id="editbtn">Edit Information</button></div>
 		</div>
+<h2>Class Schedule</h2>
 		<div id="calendar">
-			<div id="top-cal">
-				<div id="cal-prev">&#10094;</div>
-				<div>
-					<h4 id="year">2021</h4>
-					<h3 id="month">September</h3>
-				</div>
-				<div id="cal-next">&#10095;</div>
+			<div id="weeklysched">
+				  <button id="daybtn" class="days" onclick="currentDiv(1)">Sun</button>
+				  <button id="daybtn" class="days" onclick="currentDiv(2)">Mon</button> 
+				  <button id="daybtn" class="days" onclick="currentDiv(3)">Tue</button> 
+				  <button id="daybtn" class="days" onclick="currentDiv(4)">Wed</button>
+				  <button id="daybtn" class="days" onclick="currentDiv(5)">Thu</button> 
+				  <button id="daybtn" class="days" onclick="currentDiv(6)">Fri</button> 
+				  <button id="daybtn" class="days" onclick="currentDiv(7)">Sat</button>   
 			</div>
-			<div id="mid-cal">
-				<div id="cal-dow">
-					<div>S</div>
-					<div>M</div>
-					<div>T</div>
-					<div>W</div>
-					<div>TH</div>
-					<div>F</div>
-					<div>S</div>
-				</div>
-				<div id="cal-date">
-					<div id="cal-empty"></div>
-					<div><span>1</span></div>
-					<div><span>2</span></div>
-					<div><span>3</span></div>
-					<div><span>4</span></div>
-					<div><span>5</span></div>
-					<div class="cal-event"><span>6</span></div>
-					<div><span>7</span></div>
-					<div><span>8</span></div>
-					<div><span>9</span></div>
-					<div><span>10</span></div>
-					<div class="cal-event"><span>11</span></div>
-					<div><span>12</span></div>
-					<div><span>13</span></div>
-					<div><span>14</span></div>
-					<div><span>15</span></div>
-					<div><span>16</span></div>
-					<div><span>17</span></div>
-					<div><span>18</span></div>
-					<div><span>19</span></div>
-					<div><span>20</span></div>
-					<div><span>21</span></div>
-					<div><span>22</span></div>
-					<div><span>23</span></div>
-					<div><span>24</span></div>
-					<div class="cal-now"><span>25</span></div>
-					<div><span>26</span></div>
-					<div><span>27</span></div>
-					<div><span>28</span></div>
-					<div><span>29</span></div>
-					<div><span>30</span></div>
-					<div class="remove"><span>31</span></div>
-				</div>
+
+			<div>
+				  <img class="mySlidesDate" src="../_img/SL1.jpg" width="100%" height="100%">
+				  <img class="mySlidesDate" src="../_img/SL2.jpg" width="100%" height="100%">
+				  <img class="mySlidesDate" src="../_img/SL3.jpg" width="100%" height="100%">
+				  <img class="mySlidesDate" src="../_img/SL1.jpg" width="100%" height="100%">
+				  <img class="mySlidesDate" src="../_img/SL2.jpg" width="100%" height="100%">
+				  <img class="mySlidesDate" src="../_img/SL3.jpg" width="100%" height="100%">
+				  <img class="mySlidesDate" src="../_img/SL2.jpg" width="100%" height="100%">
 			</div>
-			<div id="btm-cal">
-				<h4>Agenda Today</h4>
-				<div>
-					<div class="agenda-time">10:00 am</div>
-					<p>Lorem ipsum dolor sit amet</p>
-				</div>
-				<div>
-					<div class="agenda-time">10:00 am</div>
-					<p>Lorem ipsum dolor sit amet</p>
-				</div>
-				<div>
-					<div class="agenda-time">10:00 am</div>
-					<p>Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
+
+			<div id="weeklysched">
+				   <button id="ctrlbtn" onclick="plusDivs(-1)">❮❮ Prev</button>
+				   <button id="ctrlbtn" onclick="">Current Day</button>
+				   <button id="ctrlbtn" onclick="plusDivs(1)">Next ❯❯</button>
+			  </div>
 		</div>
-	</div>
+
+	</div> <!-- END DIV SEC-LEFT -->
+
 	<div id="sec-mid">
 		<div id="monthly-class">
 			<div id="top-class">
-				<h3>CLASSNAME</h3>
-				<h4>September Class</h4>
+				<h3>CLUBNAME</h3>
+				<h4>Class Name</h4>
 			</div>
 			<div id="register-class">
-				<div id="registerbtn">Registered</div>
+				<button id="registerbtn">Registered</button>
 				<p>1 member registered</p>
 			</div>
 			<p>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<h4>Weekly Goals</h4>
+			<h4>Video Lessons</h4>
 			<div id="monthly-dow">
-				<div><span>S</span></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div><span>M</span></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div><span>T</span></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div><span>W</span></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div><span>TH</span></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div><span>F</span></div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div class="dow-active"><span>S</span></div>
-				<p class="dow-active">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<div><span>1</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>2</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>3</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>4</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>5</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>6</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>7</span></div>
+				<p>Video Description or link ?</p>
 			</div>
 		</div>
-		<div id="clubs">
-			<h2>Clubs</h2>
-			<div class="card-club">
-				<h3>NAME</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>0 members</p>
-				<div class="clearfix"><a href="">View</a></div>
+		
+		<div id="monthly-class">
+			<div id="top-class">
+				<h3>CLUBNAME</h3>
+				<h4>Class Name</h4>
 			</div>
-			<div class="card-club">
-				<h3>NAME</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>0 members</p>
-				<div class="clearfix"><a href="">View</a></div>
+			<div id="register-class">
+				<button id="registerbtn">Registered</button>
+				<p>1 member registered</p>
+			</div>
+			<p>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<h4>Video Lessons</h4>
+			<div id="monthly-dow">
+				<div><span>1</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>2</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>3</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>4</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>5</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>6</span></div>
+				<p>Video Description or link ?</p>
+				<div><span>7</span></div>
+				<p>Video Description or link ?</p>
 			</div>
 		</div>
-	</div>
+
+	</div> <!-- END DIV SEC-MID -->
+
 	<div id="sec-right">
 		<h2>Announcements</h2>
-		<div id="announcements">
-			No announcements
+			<div id="announcements">
+				<div>
+					<img class="mySlidesAn" src="../_img/SL1.jpg" width="100%" height="100%">
+					<img class="mySlidesAn" src="../_img/SL2.jpg" width="100%" height="100%">
+					<img class="mySlidesAn" src="../_img/SL3.jpg" width="100%" height="100%">
+				</div>
+			</div>
+
+		<div id="clubs">
+			<h2>Clubs</h2>
+				<div class="card-club">
+					<h3>BODYBUILDING CLUB</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>0 members</p>
+					<div class="clearfix"><a href="">View</a></div>
+				</div>
+				<div class="card-club">
+					<h3>DANCING CLUB</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>0 members</p>
+					<div class="clearfix"><a href="">View</a></div>
+				</div>
+				<div class="card-club">
+					<h3>SWIMMING CLUB</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>0 members</p>
+					<div class="clearfix"><a href="">View</a></div>
+				</div>
 		</div>
-		<h2>Events</h2>
-		<div id="events">
-			No upcoming events
-		</div>
-	</div>
+
+		
+	</div> <!-- END DIV SEC-RIGHT -->
+
+		<script>
+
+		// JS in Announcement
+
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlidesAn");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) { myIndex = 1 }    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 20000); // Change image every 20 seconds
+		}
+
+		// JS in Weekly Calendar
+
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function currentDiv(n) {
+			  showDivs(slideIndex = n);
+			}
+
+			function showDivs(n) {
+			  var a;
+			  var x2 = document.getElementsByClassName("mySlidesDate");
+			  var dots = document.getElementsByClassName("days");
+			  if (n > x2.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = x2.length}
+			  for (a = 0; a < x2.length; a++) {
+			    x2[a].style.display = "none";  
+			  }
+			  for (a = 0; a < dots.length; a++) {
+			    dots[a].className = dots[a].className.replace(" crntbtn", "");
+			  }
+			  x2[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " crntbtn";
+			}
+
+		</script>
+
 </body>
 </html>

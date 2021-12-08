@@ -4,6 +4,7 @@
   box-sizing: border-box;
   height: auto;
   margin: 0;
+  font-family: sans-serif;
 }
 
 body {
@@ -83,19 +84,30 @@ div[id^="sec-"] > div > *, .card-club > *, #clubs > h2 {
 }
 
 #renewbtn {
-  background-color: black;
+  background-color: #b84dff;
   border-radius: 75px;
-  padding: 1px 6px;
+  padding: 5px 10px;
   font-style: initial;
   color: white;
+  cursor: pointer;
+  border: none;
+}
+#renewbtn:hover{
+  background-color: #9900ff;
 }
 
 #editbtn {
-  background-color: black;
+  background-color: #b84dff;
   color: white;
   border-radius: 75px;
   text-align: center;
-  padding: 3px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+}
+#editbtn:hover{
+  background-color: #9900ff;
 }
 
 /* calendar */
@@ -200,11 +212,18 @@ div[id^="sec-"] > div > *, .card-club > *, #clubs > h2 {
 }
 
 #registerbtn {
-  background-color: purple;
-  color: white;
+  background-color: #b84dff;
   border-radius: 75px;
+  padding: 5px 10px;
+  font-style: initial;
+  color: white;
+  cursor: pointer;
+  border: none;
   text-align: center;
-  padding: 5px;
+}
+
+#registerbtn:hover{
+  background-color: #9900ff;
 }
 
 #register-class > p {
@@ -275,9 +294,51 @@ div[id^="sec-"] > div > *, .card-club > *, #clubs > h2 {
 /* RIGHT SECTION */
 
 #sec-right > div {
-  text-align: center;
+  
 }
 
 #events {
 
+}
+
+/* WEEKLY SCHEDULE CSS */
+
+#weeklysched{
+  text-align: center;
+}
+
+#daybtn{
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  width: 45px;
+  border: 2px solid #9900ff;
+}
+
+#daybtn:hover{
+  background-color: #9900ff;
+  color: white;
+}
+
+.crntbtn, .crntbtn:hover{
+  color:#fff!important;
+  background-color:#9900ff!important
+}
+
+#ctrlbtn{
+  background-color: #b84dff;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+#ctrlbtn:hover{
+  background-color: #9900ff;
 }
