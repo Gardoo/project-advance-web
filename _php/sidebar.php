@@ -12,5 +12,5 @@
 		<a href="#"><i class="far fa-calendar"></i> Calendar</a>
 		<a href="http://localhost/project-advance-web/admin/manage/accounts.php"><i class="fas fa-gifts"></i> Accounts</a>
 	</div>
-	<a href="http://localhost/project-advance-web/_php/logout.php"><i class="fas fa-sign-out-alt"></i> Signout</a>
+	<a href="http://localhost/project-advance-web/_php/logout.php"><i class="fas fa-sign-out-alt"></i> Sign out</a>
 </div>

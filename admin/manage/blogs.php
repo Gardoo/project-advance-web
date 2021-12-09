@@ -7,6 +7,6 @@
 </head>
 <body>
 	<!--SIDE NAVBAR-->
-	<?php require '../_php/sidebar.php'; ?>
+	<?php require '../../_php/sidebar.php' ?>
 </body>
 </html>

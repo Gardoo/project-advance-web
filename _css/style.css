@@ -200,7 +200,7 @@ ul {
 	transform: skew(5deg);
 }
 
-.card:before {
+.wrapper .card:before {
 	content: "";
 	position: absolute;
 	display: block;
@@ -215,11 +215,11 @@ ul {
 	opacity: 0;
 }
 
-.card:hover:before {
+.wrapper .card:hover:before {
 	opacity: 1;
 }
 
-.card {
+.wrapper .card {
 	position: relative;
 	width: 280px;
 	height: 360px;
@@ -232,15 +232,15 @@ ul {
 	transition: 0.5s ease-in-out;
 }
 
-.card:hover {
+.wrapper .card:hover {
 	transform: translateY(20px);
 }
 
-.card:hover > .info {
+.wrapper .card:hover > .info {
 	opacity: 1;
 }
 
-.card > img {
+.wrapper .card > img {
 	position: absolute;
 	width: 112%;
 	height: 100%;
@@ -598,6 +598,60 @@ button[class*="btn"]:hover {
 	background-color: #1aff1a;
 }
 
+/*============ CLUBS: LANDING PAGE ============*/
+
+/*------------ Container ------------*/
+#clubs {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#clubs > h1 {
+	text-align:center;
+	margin: 10px 0;
+}
+
+.c-container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+}
+
+.c-container > .card {
+	position: relative;
+	width: calc(33.3% - 16px);
+	margin: 8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.c-container > .card > img {
+	height: 250px;
+	width: 250px;
+}
+
+.c-container > .card > .container {
+	padding: 0 16px;
+}
+
+.c-container > .card > .container .button {
+	display: inline-block;
+	width: 50%;
+	padding: 8px;
+	margin: 8px;
+	border: none;
+	border-radius: 10px;
+	outline: 0;
+	background-color: #668cff;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.c-container > .card > .container .button:hover {
+	background-color: #3366ff;
+}
+
+
+
 /*============ ADMIN: LANDING PAGE ============*/
 
 /*------------ Sidebar ------------*/
@@ -725,12 +779,22 @@ button[class*="btn"]:hover {
 	cursor: pointer;
 }
 
-/*============ ADMIN: MANAGE ACCOUNTS ============*/
+.announcement > a {
+	cursor: pointer;
+}
+
+/*============ ADMIN MANAGE ============*/
 .container > h2 {
 	margin: 20px;
 }
 
-#accounts {
+.data {
+	width: calc(100% - 20px);
+	margin: 10px;
+	overflow-x: auto;
+}
+
+.data > table {
 	display: table;
 	height: auto;
 	width: auto;
@@ -739,21 +803,21 @@ button[class*="btn"]:hover {
 	font-family: arial, sans-serif;
 }
 
-#accounts th, #accounts td {
+.data > table th, .data > table td {
 	padding: 8px;
 	border: 1px solid #003366;
 	text-align: left;
 	white-space: nowrap;
 }
 
-#accounts th {
+.data > table th {
 	background-color: #003366;
 	color: white;
 	text-align: center;
 	cursor: pointer;
 }
 
-#accounts th > span {
+.data > table th > span {
 	content: " ";
 	position: relative;
  	top: 12px;
@@ -763,14 +827,23 @@ button[class*="btn"]:hover {
 	border-color: white transparent transparent transparent;
 }
 
-#accounts tr:nth-child(even) {
+.data > table tr:nth-child(even) {
 	background-color: lightgray;
 }
 
-#accounts tr:hover {
+.data > table tr:hover {
 
 }
 
+/*============ ADMIN: ANNOUNCEMENTS ============*/
+#announcements {
+
+}
+
+/*------------ Create Announcements ------------*/
+
+
+/*============ ADMIN: ACCOUNTS ============*/
 #accounts td:last-child {
 	white-space: unset;
 }
@@ -790,12 +863,6 @@ button[class*="btn"]:hover {
 	font-size: 12px;
 	cursor: pointer;
 	white-space: nowrap;
-}
-
-.data {
-	width: calc(100% - 20px);
-	margin: 10px;
-	overflow-x: auto;
 }
 
 .dabtn {

@@ -48,7 +48,6 @@
 					<?php endif ?>
 					<a href="#programs">Services</a>
 					<a href="blog.php">Blog</a>
-					<a href="#">Class</a>
 					<a href="#contacts">Contact</a>
 					<a href="about.php">About</a>
 				</div>

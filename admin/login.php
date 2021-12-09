@@ -2,11 +2,11 @@
 require_once('../_php/session.php'); // $SESSION START
 require_once('../_php/connect.php'); // DB CONNECTION
 
-if(!empty($_SESSION["user"]) && $_SESSION["level"] == 1) {
+/**if(!empty($_SESSION["user"]) && $_SESSION["level"] == 1) {
 	echo '<script type="text/javascript">window.location.href = "index.php";</script>';
 } elseif (!empty($_SESSION["user"])) {
 	echo '<script type="text/javascript">window.location.href = "../profile/";</script>';
-}
+}**/ // UPDATE DB FIRST!!!
 
 $username = $password = "";
 

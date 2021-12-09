@@ -1,11 +1,11 @@
 <?php
 require_once '../_php/session.php';
 
-if(!empty($_SESSION["user"]) && $_SESSION["level"] != 1) {
+/**if(!empty($_SESSION["user"]) && $_SESSION["level"] != 1) {
 	echo '<script type="text/javascript">alert("Unathorized access."); window.location.href = "../";</script>';
 } elseif (empty($_SESSION["user"])) {
 	echo '<script type="text/javascript">window.location.href = "login.php";</script>';
-}
+}**/ // UPDATE DB FIRST!!!
 
 $conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
 

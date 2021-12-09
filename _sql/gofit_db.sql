@@ -2,8 +2,7 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.5-10.4.21-MariaDB : Database - gofit_db
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -67,7 +66,7 @@ CREATE TABLE `accounts` (
   PRIMARY KEY (`user_id`),
   KEY `branch_id` (`branch_id`),
   CONSTRAINT `accounts_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `accounts` */
 
@@ -78,17 +77,12 @@ insert  into `accounts`(`user_id`,`fname`,`lname`,`status`,`date_joined`,`branch
 DROP TABLE IF EXISTS `announcements`;
 
 CREATE TABLE `announcements` (
-  `from` varchar(50) NOT NULL,
   `to` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
-  `desc` varchar(500) NOT NULL,
-  `date` datetime NOT NULL,
-  `until` datetime NOT NULL,
-  `branch_id` int(10) unsigned DEFAULT NULL,
+  `description` varchar(500) NOT NULL,
+  `date_created` datetime NOT NULL,
   `user_id` bigint(20) unsigned NOT NULL,
-  KEY `branch_id` (`branch_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `announcements_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`),
   CONSTRAINT `announcements_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -119,11 +113,9 @@ DROP TABLE IF EXISTS `branches`;
 CREATE TABLE `branches` (
   `branch_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `location` varchar(50) DEFAULT NULL,
-  `user_id` bigint(20) unsigned DEFAULT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'active',
-  PRIMARY KEY (`branch_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `branches_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
+  `date_created` datetime NOT NULL,
+  PRIMARY KEY (`branch_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `branches` */
@@ -135,8 +127,9 @@ DROP TABLE IF EXISTS `clubs`;
 CREATE TABLE `clubs` (
   `club_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `desc` varchar(500) DEFAULT NULL,
-  `date` datetime NOT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `date_created` datetime NOT NULL,
+  `status` varchar(10) DEFAULT 'active',
   `branch_id` int(10) unsigned NOT NULL,
   `user_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`club_id`),
