@@ -492,11 +492,11 @@ ul {
 /*------------ Form ------------*/
 .formbox {
 	position: absolute;
-	max-width: 650px;
-	left: 560px;
+	max-width: 580px;
+	left: 570px;
 	padding: 10px 40px;
 	background: ghostwhite;
-	border: 1px solid;
+	border: 2px solid lightgray;
 	border-radius: 25px;
 }
 
@@ -552,7 +552,7 @@ ul {
 
 [class^="t-box"] > input:focus, 
 [class^="t-box"] > input:valid {
-	border-color: #48dbfb;
+	border-color: #9900ff;
 }
 
 [class^="t-box"] > .details {
@@ -571,7 +571,6 @@ ul {
 }
 
 button[class*="btn"] {
-	width: 100%;
 	padding: 14px 20px;
 	margin: 5px 0;
 	color: white;
@@ -588,14 +587,13 @@ button[class*="btn"]:hover {
 .cancelbtn {
 	float: left;
 	width: 49%;
-	padding: 14px 20px;
 	background-color: #ff3333;
 }
 
 .signupbtn {
 	float: right;
 	width: 49%;
-	background-color: #1aff1a;
+	background-color: #9900ff;
 }
 
 /*============ CLUBS: LANDING PAGE ============*/

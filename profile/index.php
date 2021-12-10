@@ -31,7 +31,7 @@ if(empty($_SESSION["user"])) {
 				<div><b>E-mail: </b><?= $_SESSION['email'] ?></div>
 				<div><b>Contact #: </b><?= $_SESSION['pnum'] ?></div>
 			</div>
-			<div><button id="editbtn">Edit Information</button></div>
+			<div><a href="edit.php"><button id="editbtn">Edit Information</button></a></div>
 		</div>
 <h2>Class Schedule</h2>
 		<div id="calendar">
