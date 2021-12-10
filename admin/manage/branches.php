@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../../_css/style.css">
-	<title>Manage Blogs | GoFIT</title>
+	<title>Manage Branches | GoFIT</title>
 </head>
 <body>
 	<div class="admin">
@@ -32,24 +32,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<?php require '../../_php/sidebar.php' ?>
 
 		<div class="container">
-			<h2>Manage Blogs</h2>
-			<form id="create_blog" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-				<label for="title">Title:</label>
-				<input type="text" id="title" name="title" placeholder="Title" required>
+			<h2>Manage Branches</h2>
+			<form id="create_bran" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+				<label for="location">Location:</label>
+				<input type="text" id="location" name="location" placeholder="Location" required>
+
+				<label for="address">Address:</label>
+				<textarea name="address" rows="3"></textarea>
 				
-				<label for="content">Content:</label>
-				<textarea name="content" rows="4"></textarea>
-				
-				<button type="submit" name="create">Publish</button>
+				<button type="submit" name="create">Create</button>
 			</form>
 			<div class="data">
-				<table id="blogs">
+				<table id="goals">
 					<tr>
-						<th>Image Path</th>
-						<th>Title</th>
-						<th>Date<span></span></th>
-						<th>Author</th>
-						<th class="action">Actions</th>
+						<th>Location<span></span></th>
+						<th>Address</th>
+						<th>Status</th>
+						<th>Date Added<span></span></th>
+						<th>Actions</th>
 					</tr>
 				</table>
 			</div>

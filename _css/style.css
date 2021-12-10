@@ -551,14 +551,14 @@ ul {
 }
 
 [class^="t-box"] > input:focus, 
-[class^="t-box"] > input:valid {
+#reg-body [class^="t-box"] > input:valid {
 	border-color: #9900ff;
 }
 
 [class^="t-box"] > .details {
 	display: block;
-	font-weight: 500;
 	margin-bottom: 5px;
+	font-weight: 500;
 }
 
 .birthday > .birthday, 
@@ -594,6 +594,26 @@ button[class*="btn"]:hover {
 	float: right;
 	width: 49%;
 	background-color: #9900ff;
+}
+
+/*============ EDIT PROFILE ============*/
+/*NOTE: other elements inherited from REGISTRATION FORM*/
+
+/*------------ Container ------------*/
+#edit-body {
+	display: block;
+	position: relative;
+	height: calc(100vh - 20px);
+	padding: 10px;
+	color: black;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+/*------------ Form ------------*/
+.editbox {
+	left: 300px!important;
 }
 
 /*============ CLUBS: LANDING PAGE ============*/

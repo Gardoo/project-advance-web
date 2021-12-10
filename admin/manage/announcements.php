@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Manage Announcements | GoFIT</title>
 	<link rel="stylesheet" type="text/css" href="../../_css/style.css">
+	<title>Manage Announcements | GoFIT</title>
 </head>
 <body>
 	<div class="admin">
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<?php require '../../_php/sidebar.php' ?>
 
 		<div class="container">
-			<h2>Announcements</h2>
+			<h2>Manage Announcements</h2>
 			<form id="create_ann" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 				<label for="title">Title:</label>
 				<input type="text" id="title" name="title" placeholder="Title" required>
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				
 				<label for="to">Send to:</label>
 				<select id="to" name="to">
-					<option value="ALL">...</option>
+					<option value="none" selected>...</option>
 					<option value="ALL">All</option>
 					<?php
 						$rs = mysqli_query($conn, "SELECT branch_id,location FROM branches WHERE status='active' ORDER BY location");

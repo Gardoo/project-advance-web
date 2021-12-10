@@ -38,9 +38,11 @@ function test_input($data) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="_css/style.css">
 	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
+	<title>Registration Form</title>
 </head>
 <body>
 <div id="reg-body">
@@ -59,7 +61,7 @@ function test_input($data) {
 			</div>
 	
 			<div class="birthday">
-				<label for="birthday">Birthday</label>
+				<label for="birthday">Birthday:</label>
 				<div class="birthday">
 					<input type="date" id="birthday" name="birthday" name="birthday" required>
 				</div>
@@ -110,7 +112,7 @@ function test_input($data) {
 
 		<div class="clearfix">
 			<a href="index.php"><button type="button" class="cancelbtn" name="reg_user" >Cancel</button></a>
-			<button type="submit" id="signUp" class="signupbtn" name="submit">Sign Up</button>
+			<button type="submit" class="signupbtn" name="submit">Sign Up</button>
 		</div>
 	</form>
 </div>

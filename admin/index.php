@@ -31,11 +31,11 @@ if (mysqli_multi_query($conn, $q)) {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Admin | GoFIT</title>
 	<meta name="viewport" content="width=device,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../_css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/09cccaa74d.js" crossorigin="anonymous"></script>
+	<title>Admin | GoFIT</title>
 </head>
 <body>
 	<div class="admin">

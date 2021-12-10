@@ -1,217 +1,131 @@
+<?php
+require_once('../_php/session.php'); // $SESSION START
+$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+
+$fname = $lname = $dob = $sex = $pnum = $address = $email = $username = $password = $opassword = $npassword = $cpassword = $user_id = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$fname = test_input($_POST['fname']);
+	$lname = test_input($_POST['lname']);
+	$dob = test_input($_POST['birthday']);
+	$sex = test_input($_POST['gender']);
+	$pnum = test_input($_POST['pnumber']);
+	$address = test_input($_POST['address']);
+	$email = test_input($_POST['email']);
+	$username = test_input($_POST['username']);
+	$opassword = test_input($_POST['old-password']);
+	$npassword = test_input($_POST['new-password']);
+	$cpassword = test_input($_POST['confirm-password']);
+
+	if($opassword != $_SESSION['password']) {
+		echo '<script type="text/javascript">alert("Old password incorrect.");</script>';
+	} elseif($opassword == $_SESSION['password']) {
+		$q = "UPDATE accounts SET fname='$fname',lname='$lname' WHERE user_id='" . $_SESSION['user_id'] . "';";
+		$q .= "UPDATE acc_login SET username='$username',password='$cpassword' WHERE user_id='" . $_SESSION['user_id'] . "';";
+		$q .= "UPDATE acc_profile SET dob='$dob',sex='$sex',address='$address',pnum='$pnum',email='$email' WHERE user_id='" . $_SESSION['user_id'] . "'";
+
+		$rs = mysqli_multi_query($conn, $q);
+
+		if ($rs) {
+			$_SESSION["username"] =  $username;
+			require('../_php/fetch.php');
+			echo '<script type="text/javascript">alert("Updated Sucessfully.");window.location.href = "index.php";</script>';
+		} elseif ($rs === FALSE) {
+			echo mysqli_error($conn); // use error string
+		}
+	}
+}
+
+function test_input($data) {
+	return trim(stripslashes(htmlspecialchars($data)));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../_css/style.css">
 	<link rel="icon" href="../_img/gofit_logo.png" type="image/icon type">
 	<title>Edit Profile | GoFIT</title>
 </head>
-
-<style>
-	
-#reg-body {
-	font-family: sans-serif;
-	position: relative;
-	height: calc(100vh - 20px);
-	padding: 10px;
-	color: black;
-	display: block;
-	justify-content: center;
-	align-items: center;
-}
-
-/*------------ Form ------------*/
-.formbox {
-	position: absolute;
-	max-width: 580px;
-	left: 300px;
-	padding: 10px 40px;
-	background: ghostwhite;
-	border: 2px solid lightgray;
-	border-radius: 25px;
-}
-
-/*------------ elements ------------*/
-.title::before {
-	position: absolute;
-	height: 4px;
-	width: 100%;
-	content: ' ';
-	left: 0;
-	bottom: 0;
-	background: lightgray;
-}
-
-.title {
-	position: relative;
-	padding-bottom: 10px;
-	text-align: center;
-	font-size: 40px;
-	font-weight: 500;
-}
-
-.user-info {
-	margin: 20px 0 12px 0;
-	/*top: 10; */
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.t-box1 {
-	margin-bottom: 10px;
-	width: 47%;
-}
-
-.t-box2 {
-	margin-bottom: 10px;
-	width: 100%;
-}
-
-[class^="t-box"] > input {
-	height: 30px;
-	width: 100%;
-	padding-left: 15px;
-	outline: none;
-	font-size: 16px;
-	border-bottom-width: 3px;
-	border: 3px solid #ccc;
-	border-radius: 10px;
-	background: whitesmoke;
-	transition: all 0.3s ease;
-}
-
-[class^="t-box"] > input:focus{
-	border-color: #9900ff;
-}
-
-[class^="t-box"] > .details {
-	display: block;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-
-.birthday > .birthday, 
-.gender > .category { /*??? & fix nested*/
-	height: 30px;
-	width: 100%;
-	margin: 8px 1px;
-	display: flex;
-	justify-content: space-between;
-}
-
-button[class*="btn"] {
-	padding: 14px 20px;
-	margin: 5px 0;
-	color: white;
-	border: none;
-	border-radius: 25px;
-	cursor: pointer;
-	opacity: 0.9;
-}
-
-button[class*="btn"]:hover {
-	opacity: 0.7;
-}
-
-.cancelbtn {
-	float: left;
-	width: 49%;
-	background-color: #ff3333;
-}
-
-.savebtn {
-	float: right;
-	width: 49%;
-	background-color: #9900ff;
-}
-
-
-</style>
-
-
 <body>
-<div id="reg-body">
-	<form class="formbox" method="post">
+<div id="edit-body">
+	<form class="formbox editbox" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<div class="title">Edit Information</div>
 
+		<input type="hidden" id="identifier" value="<?= $_SESSION['user_id'] ?>">
+
 		<div class="user-info">
+			<div class="t-box1">
+				<span for="fname">First Name:</span>
+				<input type="text" id="fname" name="fname" placeholder="First Name" value="<?= $_SESSION['fname']?>" required>
+			</div>
 
-		<div class="t-box1">
-			<span for="fname">First Name:</span>
-			<input type="text" id="fname" name="fname" placeholder="First Name" required>
-		</div>
+			<div class="t-box1">
+				<span for="lname">Last Name:</span>
+				<input type="text" id="lname" name="lname" placeholder="Last Name" value="<?= $_SESSION['lname'] ?>" required>
+			</div>
 
-		<div class="t-box1">
-			<span for="lname">Last Name:</span>
-			<input type="text" id="lname" name="lname" placeholder="Last Name" required>
-		</div>
-
-		<div class="birthday">
-				<label for="bdate">Birthdate:</label>
 			<div class="birthday">
-				<input type="date" id="bdate" name="bdate" min="" max="">
+				<label for="birthday">Birthday:</label>
+				<div class="birthday">
+					<input type="date" id="birthday" name="birthday" name="birthday" value="<?= date('Y-m-d',strtotime($_SESSION['dob'])) ?>" required>
+				</div>
+			</div>
+
+			<div class="gender">
+				<span class="">Gender:</span>
+				<div class="category">
+					<select name="gender">
+						<option value="male" <?php if($_SESSION['sex'] == 'male'): ?> selected <?php endif ?>>Male</option>
+						<option value="female" <?php if($_SESSION['sex'] == 'female'): ?> selected <?php endif ?>>Female</option>
+						<option value="other" <?php if($_SESSION['sex'] == 'other'): ?> selected <?php endif ?>>Other</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="t-box1">
+				<span class="details">Phone Number:</span>
+				<input type="text" placeholder="Phone Number" name="pnumber" value="<?= $_SESSION['pnum']?>" required>
+			</div>
+
+			<div class="t-box2">
+				<span class="details">Physical Address:</span>
+				<input type="text" placeholder="Physical Address" name="address" value="<?= $_SESSION['address']?>" required>
+			</div>
+
+			<div class="t-box2">
+				<span class="details">E-mail Address:</span>
+				<input type="text" placeholder="E-mail Address" name="email" value="<?= $_SESSION['email']?>" required>
+			</div>
+
+			<div class="t-box2">
+				<span class="details">Username:</span>
+				<input type="text" placeholder="Username" name="username" value="<?= $_SESSION['user']?>" required>
+			</div>
+
+			<div class="t-box2">
+				<span class="details">Enter Old Password:</span>
+				<input type="password" name="old-password" placeholder="Old Password" required>
+			</div>
+
+			<div class="t-box2">
+				<span class="details">Enter New Password:</span>
+				<input type="password" name="new-password" placeholder="New Password" required>
+			</div>
+
+			<div class="t-box2">
+				<span class="details">Confirm New Password:</span>
+				<input type="password" name="confirm-password" placeholder="Confirm New Password" required>
 			</div>
 		</div>
 
-		<div class="gender">
-				<label>Gender:</label>
-			<div class="category">
-				<input type="radio" id="male" name="gender" value="Male">
-				<label for="male">Male</label>
-				<input type="radio" id="female" name="gender" value="Female">
-				<label for="female">Female</label>
-			</div>
+		<div class="clearfix">
+			<a href="index.php"><button type="button" class="cancelbtn" name="reg_user" >Cancel</button></a>
+			<button type="submit" class="signupbtn" name="submit">Save</button>
 		</div>
-
-		<div class="t-box1">
-			<span for="phone">Phone Number:</span>
-			<!--ADD BEFORE FOR +63-->
-  			<input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="999 123 4567">
-  		</div>
-
-		<div class="t-box2">
-			<span for="address">Physical Address:</span>
-			<input type="text" id="address" name="address">
-		</div>
-
-		<div class="t-box2">	
-			<span for="city">City:</span>
-			<input type="text" id="city" name="city">
-		</div>
-
-		<div class="t-box2">
-			<span for="email">E-mail Address:</span>
-  			<input type="email" id="email" name="email">
-		</div>
-
-		<div class="t-box2">
-			<span for="user">Username:</span>
-			<input type="text" id="user" name="user" placeholder="Username" required>
-		</div>
-
-		<div class="t-box2">
-			<span for="user">Enter Old Password:</span>
-			<input type="password" id="" name="password" placeholder="Password" required>
-		</div>
-
-		<div class="t-box2">
-			<span for="user">Enter New Password:</span>
-			<input type="password" id="" name="newpass" placeholder="New Password" required>
-		</div>
-
-		<div class="t-box2">
-			<span for="user">Confirm New Password:</span>
-			<input type="password" id="" name="confirm_newpass" placeholder="Confirm New Password" required>
-		</div>
-
-	</div>
-
-		<div class="">
-			<button type="button" class="cancelbtn">Cancel</button>
-			<button type="button" class="savebtn">Save</button>
-		</div>
-
 	</form>
 </div>
 </body>

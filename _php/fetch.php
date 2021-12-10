@@ -14,7 +14,7 @@ final class user_data {
 	}
 }
 
-$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT fname,lname,status,dob,sex,address,pnum,email,username,level FROM accounts JOIN acc_profile ON accounts.user_id = acc_profile.user_id JOIN acc_login ON acc_profile.user_id = acc_login.user_id WHERE username = '" . $_SESSION["user"] . "'")); // fix to make ALL EXCEPT
+$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT accounts.user_id,fname,lname,status,dob,sex,address,pnum,email,username,password,level FROM accounts JOIN acc_profile ON accounts.user_id = acc_profile.user_id JOIN acc_login ON acc_profile.user_id = acc_login.user_id WHERE username = '" . $_SESSION["username"] . "'")); // fix to make ALL EXCEPT
 
 foreach ($row as $key => $value) {
 	$dt = new user_data($key, $value);

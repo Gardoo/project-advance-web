@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$is_enter = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM admin_account WHERE username = '$username' AND password = '$password'"));
 
 	if($is_enter) {
-		$_SESSION["user"] =  $username;
+		$_SESSION["username"] =  $username;
 		echo '<script type="text/javascript">window.location.href = "index.php";</script>';
 	} elseif ($is_enter === 0) {
 		echo '<script type="text/javascript">alert("Invalid Credentials");</script>'; // use error string
