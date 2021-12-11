@@ -1,6 +1,7 @@
 <?php
 require_once('../_php/session.php'); // $SESSION START
 $conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+$dir = 'Edit Profile';
 
 $fname = $lname = $dob = $sex = $pnum = $address = $email = $username = $password = $opassword = $npassword = $cpassword = $user_id = "";
 
@@ -44,11 +45,7 @@ function test_input($data) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../_css/style.css">
-	<link rel="icon" href="../_img/gofit_logo.png" type="image/icon type">
-	<title>Edit Profile | GoFIT</title>
+	<?php require '../_php/header.php' ?>
 </head>
 <body>
 <div id="edit-body">

@@ -1,5 +1,6 @@
 <?php 
 require_once('_php/session.php'); // $SESSION START
+$dir = 'Log-in';
 
 if(!empty($_SESSION["user"])) {
 	echo '<script type="text/javascript">window.location.href = "profile/";</script>';
@@ -16,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$is_enter = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM acc_login WHERE username = '$username' AND password = '$password'"));
 
 	if($is_enter) {
-		$_SESSION["user"] =  $username;
+		$_SESSION["username"] =  $username;
 		require('_php/fetch.php');
 		echo '<script type="text/javascript">window.location.href = "profile/";</script>';
 	} elseif ($is_enter === 0) {
@@ -32,10 +33,7 @@ function test_input($data) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Login | GoFIT</title>
-	<meta name="viewport" content="width=device,initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="_css/style.css">
+	<?php require '_php/header.php' ?>
 </head>
 <body>
 	<form class="home u-container" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">

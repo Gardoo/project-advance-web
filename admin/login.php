@@ -1,6 +1,7 @@
 <?php
 require_once('../_php/session.php'); // $SESSION START
 require_once('../_php/connect.php'); // DB CONNECTION
+$dir = 'Admin Log-in';
 
 /**if(!empty($_SESSION["user"]) && $_SESSION["level"] == 1) {
 	echo '<script type="text/javascript">window.location.href = "index.php";</script>';
@@ -32,10 +33,7 @@ function test_input($data) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Login | GoFIT</title>
-	<meta name="viewport" content="width=device,initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../_css/style.css">
+	<?php require '../_php/header.php' ?>
 </head>
 <body>
 	<form class="home u-container" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>">

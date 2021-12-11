@@ -31,7 +31,7 @@ CREATE TABLE `acc_login` (
 
 /*Data for the table `acc_login` */
 
-insert  into `acc_login`(`username`,`password`,`level`,`user_id`) values ('eru.2001','123098',3,1);
+insert  into `acc_login`(`username`,`password`,`level`,`user_id`) values ('eru.2001','321890',3,1);
 
 /*Table structure for table `acc_profile` */
 
@@ -81,7 +81,7 @@ CREATE TABLE `announcements` (
   `title` varchar(50) NOT NULL,
   `description` varchar(500) NOT NULL,
   `date_created` datetime NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL COMMENT 'announcer',
   KEY `user_id` (`user_id`),
   CONSTRAINT `announcements_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -98,7 +98,7 @@ CREATE TABLE `blogs` (
   `title` varchar(255) NOT NULL,
   `content` varchar(4000) NOT NULL,
   `date` datetime NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL COMMENT 'publisher',
   PRIMARY KEY (`blog_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `blogs_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
@@ -113,6 +113,7 @@ DROP TABLE IF EXISTS `branches`;
 CREATE TABLE `branches` (
   `branch_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `location` varchar(50) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'active',
   `date_created` datetime NOT NULL,
   PRIMARY KEY (`branch_id`)
@@ -131,12 +132,9 @@ CREATE TABLE `clubs` (
   `date_created` datetime NOT NULL,
   `status` varchar(10) DEFAULT 'active',
   `branch_id` int(10) unsigned NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`club_id`),
   KEY `branch_id` (`branch_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `clubs_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`),
-  CONSTRAINT `clubs_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `accounts` (`user_id`)
+  CONSTRAINT `clubs_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `clubs` */
@@ -157,31 +155,13 @@ CREATE TABLE `clubs_joined` (
 
 /*Data for the table `clubs_joined` */
 
-/*Table structure for table `events` */
-
-DROP TABLE IF EXISTS `events`;
-
-CREATE TABLE `events` (
-  `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) NOT NULL,
-  `desc` varchar(500) NOT NULL,
-  `date` datetime NOT NULL,
-  `until` datetime NOT NULL,
-  `branch_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`event_id`),
-  KEY `branch_id` (`branch_id`),
-  CONSTRAINT `events_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-/*Data for the table `events` */
-
 /*Table structure for table `goals` */
 
 DROP TABLE IF EXISTS `goals`;
 
 CREATE TABLE `goals` (
-  `date` date NOT NULL,
-  `desc` varchar(255) NOT NULL
+  `day` date NOT NULL,
+  `description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `goals` */
@@ -204,7 +184,7 @@ DROP TABLE IF EXISTS `payments`;
 
 CREATE TABLE `payments` (
   `trans_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `date` datetime NOT NULL,
+  `trans_date` datetime NOT NULL,
   `until` datetime NOT NULL,
   `enc_data` varchar(500) NOT NULL,
   `payment` int(10) unsigned NOT NULL,

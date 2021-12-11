@@ -1,11 +1,23 @@
+<?php
+$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+$dir = 'Clubs';
+
+function printData($row) {
+	$str = '<div class="card">';
+	$str .= '<img src="../_img/pic101.png" alt="Jane">';
+	$str .= '<div class="container">';
+	$str .= '<h2>' . $row[0] . '</h2>';
+	$str .= '<p>' . $row[1] . '</p>';
+	$str .= '<center><p><button class="button">Join Club</button></p></center>';
+	$str = '</div></div>';
+	return $str;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device,initial-scale=1.0">
-	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
-	<link rel="stylesheet" type="text/css" href="../_css/style.css">
-	<title>CLUBS | GoFIT</title>
+	<?php require '../_php/header.php' ?>
 </head>
 <body>
 	<!--HEADER (NOTIF, PROFILE)-->
@@ -23,19 +35,6 @@
 				</div>
 			</div>
 			<?php
-				$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
-
-				function printData($row) {
-					$str = '<div class="card">';
-					$str .= '<img src="../_img/pic101.png" alt="Jane">';
-					$str .= '<div class="container">';
-					$str .= '<h2>' . $row[0] . '</h2>';
-					$str .= '<p>' . $row[1] . '</p>';
-					$str .= '<center><p><button class="button">Join Club</button></p></center>';
-					$str = '</div></div>';
-					return $str;
-				}
-
 				$rs = mysqli_query($conn, "SELECT name,description FROM clubs WHERE status='active' ORDER BY date_created");
 
 				while ($row = mysqli_fetch_array($rs)) {

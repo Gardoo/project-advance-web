@@ -1,6 +1,7 @@
 <?php
 require_once('../../_php/session.php'); // $SESSION START
 $conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+$dir = 'Manage Announcements';
 
 function printData($row) {
 	$str = "<tr>";
@@ -28,10 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../../_css/style.css">
-	<title>Manage Announcements | GoFIT</title>
+	<?php require '../../_php/header.php' ?>
 </head>
 <body>
 	<div class="admin">

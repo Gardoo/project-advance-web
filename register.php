@@ -1,5 +1,6 @@
 <?php 
 $conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+$dir = 'Register';
 
 $fname = $lname = $dob = $sex = $pnum = $address = $email = $username = $password = $cpassword = "";
 
@@ -38,11 +39,7 @@ function test_input($data) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="_css/style.css">
-	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
-	<title>Registration Form</title>
+	<?php require '_php/header.php' ?>
 </head>
 <body>
 <div id="reg-body">

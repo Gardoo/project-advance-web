@@ -1,16 +1,13 @@
-<?php require_once '_php/session.php'; // $SESSION START ?>
+<?php
+require_once '_php/session.php'; // $SESSION START
+$dir = 'Home';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>GoFIT</title>
-	<meta name="viewport" content="width=device,initial-scale=1.0">
-	<link rel="icon" href="_img/gofit_logo.png" type="image/icon type">
-	<link rel="stylesheet" type="text/css" href="_css/style.css">
+	<?php require '_php/header.php' ?>
 	<link rel="stylesheet" type="text/css" href="_css/all.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="_js/func.js"></script>
 </head>
 <body>
 	<!-- VIEWPORT HOME -->

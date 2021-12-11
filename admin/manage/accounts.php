@@ -1,12 +1,28 @@
-<?php require_once('../../_php/session.php'); // $SESSION START ?>
+<?php
+require_once('../../_php/session.php'); // $SESSION START
+$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
+$dir = 'Manage Accounts';
+
+function printData($row) {
+	$str = "<tr>";
+	$str .= "<td>" . $row[0] . "</td>";
+	$str .= "<td>" . ucwords($row[1]) . " " . ucwords($row[2]) . "</td>";
+	$str .= "<td>" . ucwords($row[3]) . "</td>";
+	$str .= "<td>" . ucwords($row[4]) . "</td>";
+	$str .= "<td></td>";
+	$str .= "<td>" . $row[5] . "</td>";
+	$str .= "<td>" . $row[6] . "</td>";
+	$str .= "<td>" . $row[7] . "</td>";
+	$str .= "<td><button>Change Level</button><button class='dabtn'>Deactivate</button></td>";
+	$str .= "</tr>";
+	return $str;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../../_css/style.css">
-	<title>Manage Accounts | GoFIT</title>
+	<?php require '../../_php/header.php' ?>
 </head>
 <body>
 	<div class="admin">
@@ -30,23 +46,6 @@
 					</tr>
 
 					<?php
-						$conn = mysqli_connect('localhost', 'root', '','gofit_db'); // DB CONNECTION
-
-						function printData($row) {
-							$str = "<tr>";
-							$str .= "<td>" . $row[0] . "</td>";
-							$str .= "<td>" . ucwords($row[1]) . " " . ucwords($row[2]) . "</td>";
-							$str .= "<td>" . ucwords($row[3]) . "</td>";
-							$str .= "<td>" . ucwords($row[4]) . "</td>";
-							$str .= "<td></td>";
-							$str .= "<td>" . $row[5] . "</td>";
-							$str .= "<td>" . $row[6] . "</td>";
-							$str .= "<td>" . $row[7] . "</td>";
-							$str .= "<td><button>Change Level</button><button class='dabtn'>Deactivate</button></td>";
-							$str .= "</tr>";
-							return $str;
-						}
-
 						$filter = array("","","");
 						$str = implode(',',$filter);
 

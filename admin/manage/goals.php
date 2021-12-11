@@ -1,10 +1,11 @@
+<?php
+$dir = 'Manage Goals';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../../_css/style.css">
-	<title>Manage Goals | GoFIT</title>
+	<?php require '../../_php/header.php' ?>
 </head>
 <body>
 	<div class="admin">

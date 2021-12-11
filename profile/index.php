@@ -1,5 +1,6 @@
 <?php 
 require_once('../_php/session.php'); // $SESSION START
+$dir = 'Profile';
 
 if(empty($_SESSION["user"])) {
 	echo '<script type="text/javascript">window.location.href = "../login.php";</script>';
@@ -9,12 +10,7 @@ if(empty($_SESSION["user"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>FITNESS</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../_css/profile.css">
-	<link rel="icon" href="../_img/gofit_logo.png" type="image/icon type">
-
+	<?php require '../_php/header.php' ?>
 </head>
 <body>
 	<!--HEADER (NOTIF, PROFILE)-->
